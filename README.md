@@ -3,7 +3,8 @@
 ## 멋사 중앙대 사이트 구축
 
 ```
-이번에 제작하게 되는 rails로 제작하게 되는 웹은 REST API 규칙을 지키면서 설계하고, 필요한 기능에 따라 필요한 모델과 컨트롤러만 만들고, 불필요한 작업을 줄이기위해 주저리주저리 적어본다.
+이번에 제작하게 되는 rails로 제작하게 되는 웹은 REST API 규칙을 지키면서 설계하고,
+필요한 기능에 따라 필요한 모델과 컨트롤러만 만들고, 불필요한 작업을 줄이기위해 주저리주저리 적어본다.
 ```
 
 
@@ -99,17 +100,17 @@ https://stackoverflow.com/questions/18047191/generate-routes-for-one-page-landin
 
 > Home
 
--index (GET: /)
+-index **(GET: /)**
 
 첫 랜딩페이지가 된다.
 
--contact (GET: /contact)
+-contact **(GET: /contact)**
 
 contact us 부분이된다.
 
 > Team
 
--index (GET: teams/:teamid)
+-index **(GET: teams/:teamid)**
 
 스터디 팀을 선택했을때의 각 팀의 페이지라 생각하면된다.
 
@@ -117,22 +118,22 @@ post 컨트롤러에서는 posts/1  과 같이 show액션으로 접근했었다�
 
 > Post
 
--index ( GET: teams/:teamid/posts)
+-index **( GET: teams/:teamid/posts)**
 
 -create **( POST: teams/:teamid/posts)**
 
 -new **( GET: teams/:teamid/posts/new)**
 
--update ** ( PUT/PATCH : teams/:teamid/posts/update)**
+-update **( PUT/PATCH : teams/:teamid/posts/update)**
 
 -edit **( GET: teams/:teamid/posts/edit)**
 
 -show **( GET: teams/:teamid/posts/:id)**
 
--destroy (DELETE: ** teams/1/posts/:id)**
+-destroy **(DELETE: teams/1/posts/:id)**
 
 > User
 
--index (GET: users/:id)
+-index **(GET: users/:id)**
 
 mypage와 같은 기능이다.
