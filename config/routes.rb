@@ -5,13 +5,13 @@ Rails.application.routes.draw do
   get '/contact'=> 'home#contact'
 
   #post 관련 route
-  get 'team/posts' => 'post#index', as: 'posts'
-  post 'team/posts' => 'post#create'
-  get 'team/posts/new' => 'post#new', as: 'new_post'
-  get 'team/posts/edit' => 'post#edit', as: 'edit_post'
-  get 'team/posts/:id' => 'post#show', as: 'post'
-  put 'team/posts/:id' => 'post#update'
-  delete 'team/posts/:id' => 'post#destroy'
+  get 'team/posts' => 'posts#index', as: 'posts'
+  post 'team/posts' => 'posts#create'
+  get 'team/posts/new' => 'posts#new', as: 'new_post'
+  get 'team/posts/edit' => 'posts#edit', as: 'edit_post'
+  get 'team/posts/:id' => 'posts#show', as: 'post'
+  put 'team/posts/:id' => 'posts#update'
+  delete 'team/posts/:id' => 'posts#destroy'
 
   # user 관련 route
   get 'user/index'

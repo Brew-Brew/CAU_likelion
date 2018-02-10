@@ -1,4 +1,4 @@
-<%= form_with(model: post, local: true) do |form| %>
+<%= form_with(model: post, local: true, multipart: true) do |form| %>
   <% if post.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
@@ -12,6 +12,13 @@
   <% end %>
 
   <div class="actions">
+    <%= form.label :제목 %>
+    <%= form.text_field :title%>
+    <%= form.label :내용 %>
+    <%= tinymce :language => "ko" %>
+    <%= form.text_area :content, id: :post_content, class: "form-control tinymce", rows: "10" %>
+    <%= form.file_field :attachment %>
+    <br>
     <%= form.submit %>
   </div>
 <% end %>

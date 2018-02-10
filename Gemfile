@@ -4,8 +4,14 @@ git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
   "https://github.com/#{repo_name}.git"
 end
-
-
+# 파일업로더
+gem "carrierwave"
+# 이미지 업로더
+gem 'tinymce-rails-imageupload', '~> 4.0.0.beta'
+## i18n적용을 위한 tinymce gem이다.
+gem 'tinymce-rails-langs'
+#tinymce gem이다.
+gem 'tinymce-rails'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'
 # Use sqlite3 as the database for Active Record
