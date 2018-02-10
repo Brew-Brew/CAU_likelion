@@ -1,4 +1,5 @@
 # Ruby on rails 웹 설계하기
+http://ideveloper2.tistory.com/18 참고
 
 ## 멋사 중앙대 사이트 구축
 
