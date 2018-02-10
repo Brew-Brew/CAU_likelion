@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   #resources :posts
   # home 관련 route
   get 'home/index'
-  get 'home/contact'
+  get '/contact'=> 'home#contact'
 
   #post 관련 route
   get 'team/posts' => 'post#index', as: 'posts'
