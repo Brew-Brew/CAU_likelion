@@ -4,5 +4,5 @@
 <h2>내용</h2>
   <%=@post.content.html_safe%>
   <%= link_to "Download file", @post.attachment_url %>
-  <%= link_to 'Edit', edit_post_path(@post) %> |
+  <%= link_to 'Edit', edit_post_path(@teamid,@post) %> |
   <%= link_to 'Back', posts_path %>

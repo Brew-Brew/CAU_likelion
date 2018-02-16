@@ -1,11 +1,11 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
+  before_action :set_teamid
 
   # GET /posts
   # GET /posts.json
   def index
     @posts = Post.where("team_id = ?", params[:teamid])
-    @teamid=params[:teamid]
   end
 
   # GET /posts/1
@@ -16,22 +16,20 @@ class PostsController < ApplicationController
   # GET /posts/new
   def new
     @post = Post.new
-    @teamid=params[:teamid]
   end
 
   # GET /posts/1/edit
   def edit
-    @teamid=params[:teamid]
+
   end
 
   # POST /posts
   # POST /posts.json
   def create
     @post = Post.new(post_params)
-
     respond_to do |format|
       if @post.save
-        format.html { redirect_to post_path(@post,params[:teamid]), notice: 'Post was successfully created.' }
+        format.html { redirect_to post_path(params[:teamid],@post), notice: 'Post was successfully created.' }
         format.json { render :show, status: :created, location: @post }
       else
         format.html { render :new }
@@ -45,7 +43,7 @@ class PostsController < ApplicationController
   def update
     respond_to do |format|
       if @post.update(post_params)
-        format.html { redirect_to post_path(@post,params[:teamid]), notice: 'Post was successfully updated.' }
+        format.html { redirect_to post_path(@post.team_id,@post), notice: 'Post was successfully updated.' }
         format.json { render :show, status: :ok, location: @post }
       else
         format.html { render :edit }
@@ -69,7 +67,9 @@ class PostsController < ApplicationController
     def set_post
       @post = Post.find(params[:id])
     end
-
+    def set_teamid
+        @teamid=params[:teamid]
+    end
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
       params.fetch(:post).permit(:content,:title,:attachment,:team_id)
