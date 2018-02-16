@@ -10,13 +10,17 @@
   </thead>
 
   <tbody>
+    <% if @posts.empty? %>
+      <p>글이 없습니다.</p>
+    <% else %>
     <% @posts.each do |post| %>
       <tr>
         <td><%=post.title%></td>
-        <td><%= link_to 'Show', post %></td>
+        <td><%= link_to 'Show', "/team/#{post.team_id}/posts/#{post.id}" %></td>
         <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Destroy', "/team/#{post.team_id}/posts/#{post.id}", method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
+    <% end %>
     <% end %>
   </tbody>
 </table>

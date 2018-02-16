@@ -18,6 +18,7 @@
     <%= tinymce :language => "ko" %>
     <%= form.text_area :content, id: :post_content, class: "form-control tinymce", rows: "10" %>
     <%= form.file_field :attachment %>
+    <%= form.hidden_field :team_id, :value => params[:teamid]%>
     <br>
     <%= form.submit %>
   </div>
