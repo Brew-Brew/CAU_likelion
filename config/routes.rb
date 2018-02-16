@@ -8,9 +8,9 @@ Rails.application.routes.draw do
   get 'team/:teamid/posts' => 'posts#index', as: 'posts'
   post 'team/:teamid/posts' => 'posts#create'
   get 'team/:teamid/posts/new' => 'posts#new', as: 'new_post'
-  get 'team/:teamid/posts/edit' => 'posts#edit', as: 'edit_post'
+  get 'team/:teamid/posts/:id/edit' => 'posts#edit', as: 'edit_post'
   get 'team/:teamid/posts/:id' => 'posts#show', as: 'post'
-  put 'team/:teamid/posts/:id' => 'posts#update'
+  patch 'team/:teamid/posts/:id' => 'posts#update'
   delete 'team/:teamid/posts/:id' => 'posts#destroy'
 
   # user 관련 route
