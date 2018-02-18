@@ -14,6 +14,7 @@
   <div class="actions">
     <%= form.label :제목 %>
     <%= form.text_field :title%>
+    <br/>
     <%= form.label :내용 %>
     <%= tinymce :language => "ko" %>
     <%= form.text_area :content, id: :post_content, class: "form-control tinymce", rows: "10" %>

@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   get 'team/:teamid/posts/:id/edit' => 'posts#edit', as: 'edit_post'
   get 'team/:teamid/posts/:id' => 'posts#show', as: 'post'
   patch 'team/:teamid/posts/:id' => 'posts#update'
-  delete 'team/:teamid/posts/:id' => 'posts#destroy'
+  delete 'team/:teamid/posts/:id' => 'posts#destroy', as: 'destroy'
 
   # user 관련 route
   get 'user/index'

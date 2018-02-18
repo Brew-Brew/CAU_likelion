@@ -18,7 +18,7 @@
         <td><%=post.title%></td>
         <td><%= link_to 'Show', post_path(@teamid,post) %></td>
         <td><%= link_to 'Edit', edit_post_path(@teamid,post) %></td>
-        <td><%= link_to 'Destroy', post_path(@teamid,post), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Destroy', destroy_path(@teamid,post), method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
     <% end %>
