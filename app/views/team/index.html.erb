@@ -1,2 +1,7 @@
-<h1>Team#index</h1>
-<p>Find me in app/views/team/index.html.erb</p>
+<h1>Team<%=@teamid%></h1>
+<h4>팀구성원</h4>
+<ol>
+  <li>김개똥</li>
+  <li>홍길동</li>
+</ol>
+<%= link_to '스터디룸으로 이동하기', posts_path(@teamid) %>
