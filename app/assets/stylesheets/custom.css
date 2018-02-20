@@ -1,0 +1,91 @@
+/* Common Settings */
+html {
+  font-size: 15px; /* 1rem === 15px */
+  line-height: 1.6; /* 보통 배율값을 적어준다. 24px/15px = 1.6 */
+}
+
+html,body {
+  height:100%;
+}
+
+/*모든 요소*/
+* {
+  font-family: 'Open Sans', sans-serif;
+  color: #181818;
+}
+
+/* header */
+.brand {
+  margin: 0;
+  font-family: 'Kopub Batang', serif;
+  font-size: 1.33333333rem;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.brand a {
+  font-family: inherit;
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-light .navbar-nav .nav-link,
+.navbar-toggler {
+  font-size: 0.9333333rem;
+  font-weight: 700;
+  line-height: 1.43;
+  letter-spacing: 0.21em;
+  color: #181818;
+}
+
+.navbar-light .nav-item.active .nav-link {
+  color: #ff5216;
+}
+
+.first {
+  height:100vh;
+  min-height:400px;
+  /* linear-gradient(방향, 시작점, 끝점)*/
+  background-image: linear-gradient(to bottom, transparent 0%, #fff 100%), url('/assets/bg-header.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+
+
+/* 일정 섹션 아래로 내려가면 네비게이션 바를 회색으로 바꿔줌 (근데 현재 작동안됨 엉엉)
+.affix {
+  background-color: #eee;
+  -webkit-transition:padding 0.2s ease-out;
+  -moz-transition:padding 0.2s ease-out;  
+  -o-transition:padding 0.2s ease-out;         
+  transition:padding 0.2s ease-out;
+}
+*/
+
+/* 맨 첫 섹션에서는 네비게이션 바를 투명하게 처리해준다 (이건 현재 작동이 됨. 아마 제이쿼리에서 문제가 있는듯.) 
+@media (min-width:768px) {
+    .affix-top {
+      background-color:transparent;
+      border-color:transparent;
+      padding: 15px;
+      -webkit-transition:all 0.5s ease;
+      -moz-transition:all 0.5s ease; 
+      -o-transition:all 0.5s ease;         
+      transition:all 0.5s ease;  
+    }
+}
+*/
+
+/* Navbar 투명한 상태 + 스크롤하면 색 나타나게 하는 CSS - 작동된다 */
+.transparent-nav { background-color: transparent;}
+.transparent-nav.visible { background-color: #eee;}
+
+section {
+  height:calc(90% - 50px);
+  height: 90vh;
+}
+
