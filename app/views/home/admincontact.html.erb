@@ -1,3 +1,6 @@
-<% @contact.each do |contact| %>
-  <h3><a href="/contact/admincshow/<%= contact.id%>"><%= contact.email %>: <%= contact.content %></a></h3>
-<% end %>
+
+<div class="template">
+  <% @contact.each do |contact| %>
+    <h3><a href="/contact/admincshow/<%= contact.id%>"><%= contact.email %>: <%= contact.content %></a></h3>
+  <% end %>
+</div>
