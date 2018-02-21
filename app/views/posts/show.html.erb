@@ -1,8 +1,13 @@
-<p id="notice"><%= notice %></p>
-<h1>제목</h1>
-  <%=@post.title%>
-<h2>내용</h2>
-  <%=@post.content.html_safe%>
-  <%= link_to "Download file - #{File.basename(@post.attachment_url)}", @post.attachment_url %>
-  <%= link_to 'Edit', edit_post_path(@teamid,@post) %> |
-  <%= link_to 'Back', posts_path %>
+<div class="template">
+  <h1>제목</h1>
+    <%=@post.title%>
+  <h2>내용</h2>
+    <%=@post.content.html_safe%>
+    <% if (@post.attachment.blank?) %>
+
+    <% else %>
+    <%= link_to "Download file - #{File.basename(@post.attachment_url)}", @post.attachment_url %>
+    <% end %>
+    <%= link_to 'Edit', edit_post_path(@teamid,@post) %> |
+    <%= link_to 'Back', posts_path %>
+</div>
