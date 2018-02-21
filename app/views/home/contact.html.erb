@@ -1,9 +1,20 @@
 <div class="template">
   <form action="/contact/create" method="post">
-      <p>제목</p>
+      <!-- <p>제목</p>
       <input type="text" name="email">
+
       <p>내용</p>
-      <input type="text" name="content">
+      <input type="text" name="content"> -->
+
+      <div class="form-group">
+        <label for="exampleInputEmail1">Email address</label>
+        <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+      </br>
+        <label for="exampleFormControlTextarea1">내용</label>
+        <textarea class="form-control" name="content" rows="3"></textarea>
+      </div>
+
+
       <p>제출</p>
       <input type="submit">
   </form>

@@ -12,7 +12,7 @@ class HomeController < ApplicationController
     @contact.content=params[:content]
     @contact.save
 
-    redirect_to '/contact/complete'
+    redirect_to '/contact/admincontact'
   end
 
   def complete

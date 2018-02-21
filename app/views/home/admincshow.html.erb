@@ -1,11 +1,25 @@
 
 
 <div class="template">
-  <h1> <%=@contact.id%>번 contact 입니다.</h1>
-
-  <h2>제목 :<%= @contact.email%></h2>
-  <h2>내용 : <%= @contact.content%></h2>
-  <hr>
-
-  <h3><a href="/contact/admincontact">목록으로가기</a></h3>
+  <h4 style="text-align: center"><b><%=@contact.id%>번 contact 입니다.</b></h4>
+  <br /><br />
+  <table class="table" style="text-align: center">
+  <thead class="bg-gray-dark">
+    <tr>
+      <th>작성자 email</th>
+      <th>내용</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><%= @contact.email%></td>
+      <td><%= @contact.content%></td>
+    </tr>
+  </tbody>
+    <!-- <h2>이메일 :<%= @contact.email%></h2>
+    <h2>내용 : <%= @contact.content%></h2>
+    <hr> -->
+  </table>
+  <br /><br />
+  <h4><a href="/contact/admincontact">목록으로가기</a></h4>
 </div>
