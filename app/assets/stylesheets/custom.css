@@ -49,7 +49,7 @@ html,body {
   height:100vh;
   min-height:400px;
   /* linear-gradient(방향, 시작점, 끝점)*/
-  background-image: linear-gradient(to bottom, transparent 0%, #4d4d4d 100%), url('/assets/bg-header.jpg');
+  background-image: url('/assets/bg-header.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -85,7 +85,7 @@ html,body {
 
 /* Navbar 투명한 상태 + 스크롤하면 색 나타나게 하는 CSS - 작동된다 */
 .transparent-nav { background-color: transparent;}
-.transparent-nav.visible { background-color: #eee;}
+.transparent-nav.visible { background-color: #ffc107; color: white;}
 
 section {
   height:calc(90% - 50px);
