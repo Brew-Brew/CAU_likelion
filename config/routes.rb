@@ -22,6 +22,9 @@ Rails.application.routes.draw do
 
   # 팀관련 route
   get 'teams/:teamid' => 'team#index'
+  get 'secret' => 'team#secret'
+  post 'teams/admin' => 'team#admin', as: 'admin'
+  post 'teams/student' => 'team#student', as: 'student'
 
   #root 연결
   root 'home#index'

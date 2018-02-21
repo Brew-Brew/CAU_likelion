@@ -4,8 +4,13 @@ git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
   "https://github.com/#{repo_name}.git"
 end
+#권한부여
+gem "rolify"
+#로그인,회원가입을 위한
 gem 'devise'
+#j-query
 gem 'jquery-rails'
+#rails_db
 gem 'rails_db'
 # 파일업로더
 gem "carrierwave"

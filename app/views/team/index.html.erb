@@ -3,7 +3,7 @@
   <h4>팀구성원</h4>
   <ol>
     <% @users.each do |user| %>
-    <li><%=user.name%></li>
+    <li><%=user.name%>: <%=user.roles.first.name%></li>
     <% end %>
   </ol>
   <%= link_to '스터디룸으로 이동하기', posts_path(@teamid) %>
