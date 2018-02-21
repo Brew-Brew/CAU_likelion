@@ -37,7 +37,7 @@ html,body {
   font-weight: 700;
   line-height: 1.43;
   letter-spacing: 0.21em;
-  color: #181818;
+  color: #fff;
 }
 
 .navbar-light .nav-item.active .nav-link {
@@ -45,13 +45,16 @@ html,body {
 }
 
 .first {
+  display: flex;
   height:100vh;
   min-height:400px;
   /* linear-gradient(방향, 시작점, 끝점)*/
-  background-image: linear-gradient(to bottom, transparent 0%, #fff 100%), url('/assets/bg-header.jpg');
+  background-image: linear-gradient(to bottom, transparent 0%, #4d4d4d 100%), url('/assets/bg-header.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+
+
 }
 
 
@@ -60,22 +63,22 @@ html,body {
 .affix {
   background-color: #eee;
   -webkit-transition:padding 0.2s ease-out;
-  -moz-transition:padding 0.2s ease-out;  
-  -o-transition:padding 0.2s ease-out;         
+  -moz-transition:padding 0.2s ease-out;
+  -o-transition:padding 0.2s ease-out;
   transition:padding 0.2s ease-out;
 }
 */
 
-/* 맨 첫 섹션에서는 네비게이션 바를 투명하게 처리해준다 (이건 현재 작동이 됨. 아마 제이쿼리에서 문제가 있는듯.) 
+/* 맨 첫 섹션에서는 네비게이션 바를 투명하게 처리해준다 (이건 현재 작동이 됨. 아마 제이쿼리에서 문제가 있는듯.)
 @media (min-width:768px) {
     .affix-top {
       background-color:transparent;
       border-color:transparent;
       padding: 15px;
       -webkit-transition:all 0.5s ease;
-      -moz-transition:all 0.5s ease; 
-      -o-transition:all 0.5s ease;         
-      transition:all 0.5s ease;  
+      -moz-transition:all 0.5s ease;
+      -o-transition:all 0.5s ease;
+      transition:all 0.5s ease;
     }
 }
 */
@@ -88,4 +91,3 @@ section {
   height:calc(90% - 50px);
   height: 90vh;
 }
-

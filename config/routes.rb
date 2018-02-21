@@ -4,7 +4,10 @@ Rails.application.routes.draw do
   # home 관련 route
   get 'home/index'
   get '/contact'=> 'home#contact'
-
+  post '/contact/create' =>'home#create'
+  get '/contact/complete' => 'home#complete'
+  get '/contact/admincontact' => 'home#admincontact'
+  get '/contact/admincshow/:contact_id' => 'home#admincshow'
   #post 관련 route
   get 'teams/:teamid/posts' => 'posts#index', as: 'posts'
   post 'teams/:teamid/posts' => 'posts#create'

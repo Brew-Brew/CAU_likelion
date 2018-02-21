@@ -1,3 +1,46 @@
 // Place all the styles related to the Home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.var-highlight{
+    color: #C0AD60;
+    font-family: 'courier new';
+
+}
+.string-highlight{
+    color: rgba(253, 149, 90, 0.8);
+    font-family: courier;
+}
+.typestyle {
+  width: 1000px;
+  margin: auto;
+  justify-content: center!important;
+
+
+}
+
+#typewriter{
+        color: white;
+        font-size: 2em;
+        margin: 0;
+        font-family: "Courier New";
+
+        &:after{
+            content: "|";
+            animation: blink 500ms linear infinite alternate;
+        }
+}
+
+@-webkit-keyframes blink{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+@-moz-keyframes blink{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+@keyframes blink{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
