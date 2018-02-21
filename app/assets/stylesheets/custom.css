@@ -37,7 +37,7 @@ html,body {
   font-weight: 700;
   line-height: 1.43;
   letter-spacing: 0.21em;
-  color: #fff;
+  color: #ffc107;
 }
 
 .navbar-light .nav-item.active .nav-link {
@@ -85,7 +85,10 @@ html,body {
 
 /* Navbar 투명한 상태 + 스크롤하면 색 나타나게 하는 CSS - 작동된다 */
 .transparent-nav { background-color: transparent;}
-.transparent-nav.visible { background-color: #ffc107; color: white;}
+.transparent-nav.visible { background-color: #ffc107; }
+.transparent-nav.visible .nav-item .nav-link {
+  color: white;
+}
 
 section {
   height:calc(90% - 50px);
