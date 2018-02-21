@@ -17,3 +17,11 @@
 .template{
   margin: 10rem 10rem;
 }
+
+.text-center {
+  text-align: center!important;
+}
+
+.page-heading {
+  font-family: 'Open Sans', sans-serif;
+}
