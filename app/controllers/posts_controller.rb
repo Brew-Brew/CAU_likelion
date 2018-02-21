@@ -6,6 +6,7 @@ class PostsController < ApplicationController
   # GET /posts.json
   def index
     @posts = Post.where("team_id = ?", params[:teamid])
+
   end
 
   # GET /posts/1
@@ -72,6 +73,6 @@ class PostsController < ApplicationController
     end
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.fetch(:post).permit(:content,:title,:attachment,:team_id)
+      params.fetch(:post).permit(:content,:title,:attachment,:team_id,:user_id)
     end
 end
