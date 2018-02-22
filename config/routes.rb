@@ -1,13 +1,14 @@
 Rails.application.routes.draw do
+  #device 관련 route
   devise_for :users
   #resources :posts
   # home 관련 route
   get 'home/index'
-  get '/contact'=> 'home#contact'
-  post '/contact/create' =>'home#create'
-  get '/contact/complete' => 'home#complete'
-  get '/contact/admincontact' => 'home#admincontact'
-  get '/contact/admincshow/:contact_id' => 'home#admincshow'
+  get 'contact'=> 'home#contact'
+  post 'contact/create' =>'home#create'
+  get 'contact/complete' => 'home#complete'
+  get 'contact/admincontact' => 'home#admincontact'
+  get 'contact/admincshow/:contact_id' => 'home#admincshow'
   #post 관련 route
   get 'teams/:teamid/posts' => 'posts#index', as: 'posts'
   post 'teams/:teamid/posts' => 'posts#create'
@@ -22,9 +23,9 @@ Rails.application.routes.draw do
 
   # 팀관련 route
   get 'teams/:teamid' => 'team#index'
-  get 'secret' => 'team#secret'
   post 'teams/admin' => 'team#admin', as: 'admin'
   post 'teams/student' => 'team#student', as: 'student'
+  get 'secret' => 'team#secret'
 
   #root 연결
   root 'home#index'
