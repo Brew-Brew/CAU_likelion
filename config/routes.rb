@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   #resources :posts
   # home 관련 route
   get 'home/index'
+  #contact 관련 route
   get 'contact'=> 'home#contact'
   post 'contact/create' =>'home#create'
   get 'contact/complete' => 'home#complete'

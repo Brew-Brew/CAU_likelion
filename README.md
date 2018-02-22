@@ -8,6 +8,19 @@ http://ideveloper2.tistory.com/18 참고
 필요한 기능에 따라 필요한 모델과 컨트롤러만 만들고, 불필요한 작업을 줄이기위해 주저리주저리 적어본다.
 ```
 
+### 개발환경 설정하기
+
+```
+1. rake db:drop
+
+2. rake db:migrate
+(db migration)
+
+3. rake db:seed
+(Team 테이블과 관련해서만 seed 파일에 저장되어있다. 나중엔 user도 seed해야 할것이고, 추후엔 seed 할필요없이 migrate했을때, 바로 디비생성과 함께 데이터도 들어가게 기능을 수정할 예정이다.)
+
+4. rails server
+```
 
 ### 기능
 
@@ -139,3 +152,7 @@ post 컨트롤러에서는 posts/1  과 같이 show액션으로 접근했었다�
 -index **(GET: users/:id)**
 
 mypage와 같은 기능이다.
+
+-secret **(GET: secret)**
+
+유저권한설정과 같은 비밀스러운 작업을 할때 사용할 페이지이다.
