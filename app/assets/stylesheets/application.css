@@ -15,7 +15,7 @@
  */
 
 .template{
-  margin: 10rem 10rem;
+  margin: 10rem 5rem;
 }
 
 .text-center {
@@ -27,4 +27,7 @@
 }
 .user .a:link{
   color:white;
+}
+.bg-gray-dark {
+  background-color: #eceeef;
 }
