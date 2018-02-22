@@ -56,11 +56,13 @@
       </div>
       <div>
         <% if user_signed_in? %>
-        <p><%= current_user.name%></p>
-        <a href="/users/sign_out">로그아웃</a>
+          <p><%= current_user.name%></p>
+          <a class="user" href="/users/sign_out">로그아웃</a>
         <% else %>
-        <a href="/users/sign_in">로그인</a>
-        <a href="/users/sign_up">회원가입</a>
+        <div class="user">
+          <a class="user" href="/users/sign_in">로그인</a>
+          <a class="user" href="/users/sign_up">회원가입</a>
+        </div>
         <% end %>
       </div>
       </div>

@@ -89,7 +89,9 @@ html,body {
 .transparent-nav.visible .nav-item .nav-link {
   color: white;
 }
-
+.user {
+  color: white;
+}
 section {
   height:calc(90% - 50px);
   height: 90vh;
