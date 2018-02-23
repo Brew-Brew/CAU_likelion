@@ -18,21 +18,21 @@
 
  @import "bootstrap-sprockets";
  @import "bootstrap";
+ pre {border: 0; background-color: transparent;}
+ .template{
+   margin: 10rem 5rem;
+ }
 
-.template{
-  margin: 10rem 5rem;
-}
+ .text-center {
+   text-align: center!important;
+ }
 
-.text-center {
-  text-align: center!important;
-}
-
-.page-heading {
-  font-family: 'Open Sans', sans-serif;
-}
-.user .a:link{
-  color:white;
-}
-.bg-gray-dark {
-  background-color: #eceeef;
-}
+ .page-heading {
+   font-family: 'Open Sans', sans-serif;
+ }
+ .user .a:link{
+   color:white;
+ }
+ .bg-gray-dark {
+   background-color: #eceeef;
+ }
