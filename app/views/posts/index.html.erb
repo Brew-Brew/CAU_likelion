@@ -6,10 +6,10 @@
 <table class="table table-hover">
   <thead>
     <tr>
-      <th colspan="1" >Num</th>
-      <th colspan="1" >제목</th>
-      <th colspan="1">작성자</th>
-      <th colspan="3">관리</th>
+      <th scope="cols" colspan=10% >Num</th>
+      <th scope="cols" colspan=50% >제목</th>
+      <th scope="cols" colspan=10%>작성자</th>
+      <th scope="cols" colspan=30% id="theader-manage">관리</th>
     </tr>
   </thead>
 
@@ -17,19 +17,21 @@
     <% if @posts.empty? %>
       <p>글이 없습니다.</p>
     <% else %>
-          <tr>
+    <tr>
     <% @posts.each do |post| %>
 
-        <th scope="row">1</th>
-        <td><%=post.title%></td>
-        <td>
+        <td colspan=10% scope="row">1</th>
+        <td colspan=50% ><%=post.title%></td>
+        <td colspan=10%>
             <% @user = User.where(:id => post.user_id).first%>
             <%= @user.name %>
         </td>
-        <td><%= link_to 'Show', post_path(@teamid,post), class: "btn btn-outline-warning"%></td>
-        <td><%= link_to 'Edit', edit_post_path(@teamid,post), class: "btn btn-outline-warning" %></td>
-        <td><%= link_to 'Destroy', destroy_path(@teamid,post), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-outline-warning" %></td>
-      </tr>
+        <td colspan=30% id="theader-manage">
+        <%= link_to 'Show', post_path(@teamid,post), class: "btn btn-outline-warning"%>
+        <%= link_to 'Edit', edit_post_path(@teamid,post), class: "btn btn-outline-warning" %>
+        <%= link_to 'Destroy', destroy_path(@teamid,post), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-outline-warning" %>
+      </td>
+    </tr>
 
     <% end %>
     <% end %>
