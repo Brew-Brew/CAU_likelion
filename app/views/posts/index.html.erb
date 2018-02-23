@@ -26,9 +26,9 @@
             <% @user = User.where(:id => post.user_id).first%>
             <%= @user.name %>
         </td>
-        <td><%= link_to 'Show', post_path(@teamid,post) %></td>
-        <td><%= link_to 'Edit', edit_post_path(@teamid,post) %></td>
-        <td><%= link_to 'Destroy', destroy_path(@teamid,post), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', post_path(@teamid,post), class: "btn btn-outline-warning"%></td>
+        <td><%= link_to 'Edit', edit_post_path(@teamid,post), class: "btn btn-outline-warning" %></td>
+        <td><%= link_to 'Destroy', destroy_path(@teamid,post), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-outline-warning" %></td>
       </tr>
 
     <% end %>
@@ -38,5 +38,5 @@
 
 <br>
 
-<%= link_to 'New Post', new_post_path %>
+<%= link_to 'New Post', new_post_path, class: "btn btn-outline-warning" %>
 </div>
