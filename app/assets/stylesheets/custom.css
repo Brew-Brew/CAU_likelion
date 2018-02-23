@@ -124,3 +124,8 @@ section {
   background-color: #ffc107;
   color:white;
 }
+.card-slogan{
+  display: none;
+}
+.card:hover{
+  background-color: gray;
