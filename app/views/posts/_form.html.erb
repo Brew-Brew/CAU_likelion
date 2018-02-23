@@ -18,10 +18,12 @@
     <%= form.label :내용 %>
     <%= tinymce :language => "ko" %>
     <%= form.text_area :content, id: :post_content, class: "form-control tinymce", rows: "10" %>
-    <%= form.file_field :attachment %>
+    <%= form.file_field :attachment, class: "btn btn-outline-warning", value: "파일 업로드"%>
+
     <%= form.hidden_field :team_id, :value => params[:teamid]%>
     <%= form.hidden_field :user_id, :value => current_user.id%>
     <br>
-    <%= form.submit %>
+
+    <%= form.submit "제출", class: "btn btn-outline-warning"%></a>
   </div>
 <% end %>
