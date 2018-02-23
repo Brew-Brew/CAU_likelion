@@ -97,3 +97,30 @@ section {
   height: 90vh;
 
 }
+
+.post_show{
+  margin-top: 10rem;
+}
+.form-group{
+  margin: 1rem 5rem;
+  color: white;
+}
+
+.custom-file-control{
+  border-color: #ffc107;
+  color:  #ffc107;
+}
+.custom-file{
+  width: 10rem;
+  text-align: center;
+}
+#form_white{
+  color:white;
+}
+.theader-manage{
+  text-align: center;
+}
+.card-header{
+  background-color: #ffc107;
+  color:white;
+}
