@@ -1,7 +1,7 @@
 <div class="template">
   <h1>Team<%=@teamid%></h1>
   <h4>팀구성원</h4>
-  <ol>
+  <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
     <% @users.each do |user| %>
     <li><%=user.name%>: <%=user.roles.first.name%></li>
     <% end %>

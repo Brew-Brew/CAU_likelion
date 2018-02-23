@@ -4,6 +4,10 @@ git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
   "https://github.com/#{repo_name}.git"
 end
+# autoprefixer ails
+gem 'autoprefixer-rails'
+#bootstrap sass
+gem "bootstrap-sass"
 #권한부여
 gem "rolify"
 #로그인,회원가입을 위한
