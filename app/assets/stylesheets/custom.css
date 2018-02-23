@@ -97,3 +97,10 @@ section {
   height: 90vh;
 
 }
+
+.card-slogan{
+  display: none;
+}
+.card:hover{
+  background-color: gray;
+}
