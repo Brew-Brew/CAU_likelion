@@ -43,6 +43,16 @@ html,body {
 .navbar-light .nav-item.active .nav-link {
   color: #ff5216;
 }
+.dropdown-menu{
+  background-color: transparent;
+}
+.dropdown-item{
+  color:#ffc107;
+}
+.dropdown-item.active{
+  background-color: transparent;
+  color:#ff5216;
+}
 
 .first {
   display: flex;
@@ -98,9 +108,4 @@ section {
 
 }
 
-.card-slogan{
-  display: none;
-}
-.card:hover{
-  background-color: gray;
-}
+

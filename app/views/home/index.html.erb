@@ -45,7 +45,7 @@
       <hr>
       <div class="row align-items-center">
          <div class="col-md-4 my-4">
-            <div class="card">
+            <div class="card" id="민경">
               <img class="card-img-top" src="..." alt="Card image cap">
               <div class="card-body">
                 <span style="float: none;" class="badge badge-pill badge-warning">회장님</span>
@@ -53,8 +53,8 @@
                 <p class="card-text">응용통계학과 18</p>
               </div>
             </div>
-            <div class="card-slogan">
-              <h3>"다비치가 부릅니다.8282"</h3>
+            <div class="card card-text" id="slogan">
+              <h4>"다비치가 부릅니다.8282"</h4>
             </div>
          </div>
          <div class="col-md-4 my-4">
@@ -136,3 +136,26 @@
       </div>
    </div>
 </section>
+
+<script>
+/*
+$(function(){
+  var card = $('.card');
+  var slogan = $('#slogan');
+  card.mouseover(function(){
+    slogan.fadeIn();
+  });
+});
+$(function(){
+  $('.card').mouseenter(function(){
+    $('.card').css('background-color','gray');
+    $('#slogan').css('display', 'block');
+  });
+  $('card').mouseleave(function(){
+    $('.card').css('display', 'block');
+    $('#slogan').css('display', 'none');
+  });
+});
+*/
+
+</script>
