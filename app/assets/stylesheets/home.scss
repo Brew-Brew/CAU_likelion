@@ -29,6 +29,13 @@
   transition: .5s ease;
 }
 
+.card-body {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 0rem!important;
+}
+
+
 .card-img-top {
   display: block;
   width: 100%;
