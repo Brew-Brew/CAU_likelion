@@ -10,12 +10,54 @@
     color: rgba(253, 149, 90, 0.8);
     font-family: courier;
 }
+
 .typestyle {
   width: 1000px;
   margin: auto;
   justify-content: center!important;
+}
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #008CBA;
+  overflow: hidden;
+  width: 0;
+  height: 100%;
+  transition: .5s ease;
+}
 
+.card-img-top {
+  display: block;
+  width: 100%;
+  height: auto;
+}
 
+.card:hover .overlay {
+  width: 100%;
+}
+
+p.card-text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  white-space: nowrap;
+}
+
+h5.card-title{
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  white-space: nowrap;
 }
 
 #typewriter{
