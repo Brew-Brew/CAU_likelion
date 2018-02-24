@@ -1,3 +1,55 @@
 // Place all the styles related to the team controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+th.bg-color-yellow {
+  background-color: rgb(255, 232, 186);
+}
+
+.table > thead > tr > th {
+  border-bottom: 2px solid #fff!important;
+
+}
+
+
+.table > tbody > tr > td {
+  border-top: 2px solid #fff!important;
+  border-bottom: 2px solid #fff!important;
+}
+
+.alert > p {
+  text-align: center;
+  font-size: 20px;
+}
+
+.imgsizerf {
+    width: 250px;
+    margin-top: 35px;
+}
+
+.pd-stu{
+  // padding: 1.0rem;
+  padding-bottom: 15px;
+  display: flex;
+  justify-content:center;
+}
+
+#ban1 {
+    height: 180px;
+    background-size: cover;
+    background-repeat: none;
+    background-position: center;
+    min-height: 100%;
+    position: relative;
+    width: 100%;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    -webkit-perspective: 400px;
+    -o-perspective: 200px;
+    perspective: 100px;
+    margin-bottom: 20px;
+}
+
+.ban1 {
+    background: url(/assets/img/team-bg.jpg);
+}
