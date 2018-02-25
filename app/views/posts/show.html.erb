@@ -26,13 +26,18 @@
       <p>
         <%= comment.body %>
       </p>
+      
+      <p>
+        <%= link_to 'X', [comment.post, comment],
+                     :confirm => 'Are you sure?',
+                     :method => :delete %>
+      </p>
     <% end %>
     
     <h2>댓글등록</h2>
     <%= form_for([@post, @post.comments.build]) do |f| %>
       <div class="field">
-        <%= f.label :commenter %><br />
-        <%= f.text_field :commenter %>
+        <b><%= f.label :작성자 %></b> <%= current_user.name%>
       </div>
       <div class="field">
         <%= f.label :body %><br />

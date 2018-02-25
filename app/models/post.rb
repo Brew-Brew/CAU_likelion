@@ -3,5 +3,5 @@ class Post < ApplicationRecord
   validates :title, presence: true # Make sure the owner's name is present.
   belongs_to :user, :optional => true
   
-  has_many :comments
+  has_many :comments, :dependent => :destroy
 end
