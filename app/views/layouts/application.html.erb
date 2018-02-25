@@ -21,28 +21,28 @@
   <body>
 
     <!-- 우리 nav bar -->
-    <nav class="navbar fixed-top navbar-expand-lg navbar-light transparent-nav" data-spy="affix">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light transparent-nav nav-custom" data-spy="affix">
 
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         MENU
       </button>
 
-      <h1 class="brand">
+      <h1 class="app-brand">
           <a class="nav-link px-lg-3" href="/"><img class="likelion-logo pr-4 mr-4" src="/assets/img/WhiteBigLogo-iloveimg-resized.png"></a>
      	  <!-- <a class="navbar-brand" href="/">CAU LIKELION</a> -->
       </h1>
 
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav">
+        <ul class="navbar-nav nav-custom">
           <li class="nav-item active">
-            <a class="nav-link px-lg-3" href="/"> HOME <span class="sr-only">(현재 페이지)</span></a>
+            <a class="nav-link px-lg-3 nav-custom" href="/"> HOME <span class="sr-only">(현재 페이지)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link px-lg-3" href="/contact">CONTACT</a>
+            <a class="nav-link px-lg-3 nav-custom" href="/contact">CONTACT</a>
           </li>
 
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link dropdown-toggle nav-custom" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               TEAM
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -54,49 +54,17 @@
 
         </ul>
       </div>
-      <div>
+      <div class="app-user">
         <% if user_signed_in? %>
-          <p><%= current_user.name%></p>
-          <a class="user" href="/users/sign_out">로그아웃</a>
+          <a class="app-user" href=""><%= current_user.name%></a>
+          <a class="app-user" href="/users/sign_out">로그아웃</a>
         <% else %>
-        <div class="user">
-          <a class="user" href="/users/sign_in">로그인</a>
-          <a class="user" href="/users/sign_up">회원가입</a>
-        </div>
+          <a class="app-user" href="/users/sign_in">로그인</a>
+          <a class="app-user" href="/users/sign_up">회원가입</a>
         <% end %>
       </div>
       </div>
     </nav>
-
-
-    <!-- //Header -->
-
-    <!-- 노지승씨 navbar
-    <nav class="navbar navbar-toggleable-md navbar-light">
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        메뉴
-      </button>
-      <h1 class="brand">
-     	  <a class="navbar-brand" href="#">시팔이하상욱</a>
-      </h1>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item active">
-            <a class="nav-link px-lg-3" href="#">안녕 <span class="sr-only">(현재 페이지)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link px-lg-3" href="#">시팔이</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link px-lg-3" href="#">시</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link px-lg-3" href="#">연락</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-  -->
 
     <%= tinymce_assets %>
 
@@ -129,7 +97,7 @@
           if(window.scrollY >= 800) el.classList.add('visible');
           else el.classList.remove('visible');
           });
-          
+
 
           function setupTypewriter(t) {
                   var HTML = t.innerHTML;
@@ -196,12 +164,12 @@
                   };
               }
 
-              var typer = document.getElementById('typewriter');
+              var typer = document.getElementById('home-typewriter');
 
               typewriter = setupTypewriter(typewriter);
 
               typewriter.type();
-              
+
         </script>
 
   </body>

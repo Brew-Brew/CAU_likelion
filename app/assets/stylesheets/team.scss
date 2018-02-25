@@ -1,55 +1,61 @@
 // Place all the styles related to the team controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import  "application.scss";
 
-th.bg-color-yellow {
-  background-color: rgb(255, 232, 186);
+.team{
+  &-ban {
+      height: 180px;
+      background-size: cover;
+      background-repeat: none;
+      background-position: center;
+      min-height: 100%;
+      position: relative;
+      width: 100%;
+      overflow: auto;
+      -webkit-overflow-scrolling: touch;
+      -webkit-perspective: 400px;
+      -o-perspective: 200px;
+      perspective: 100px;
+      margin-bottom: 20px;
+      background: url(/assets/img/team-bg.jpg);
+  }
+  &-bg-gray-dark {
+    @extend .app-bg-gray-dark;
+  }
+  &-bg-light-yellow {
+    @extend .app-bg-light-yellow;
+  }
+  &-table{
+    text-align: center;
+    width: 100%;
+    &-header {
+      background-color: rgb(255, 232, 186);
+    }
+    thead > tr > th {
+      border-bottom: 2px solid #fff!important;
+
+    }
+
+
+    tbody > tr > td {
+      border-top: 2px solid #fff!important;
+      border-bottom: 2px solid #fff!important;
+    }
+  }
+  &-image {
+      width: 250px;
+      margin-top: 35px;
+  }
+  &-study{
+    // padding: 1.0rem;
+    padding-bottom: 15px;
+    display: flex;
+    justify-content:center;
+  }
+
 }
-
-.table > thead > tr > th {
-  border-bottom: 2px solid #fff!important;
-
-}
-
-
-.table > tbody > tr > td {
-  border-top: 2px solid #fff!important;
-  border-bottom: 2px solid #fff!important;
-}
-
 .alert > p {
   text-align: center;
   font-size: 20px;
-}
-
-.imgsizerf {
-    width: 250px;
-    margin-top: 35px;
-}
-
-.pd-stu{
-  // padding: 1.0rem;
-  padding-bottom: 15px;
-  display: flex;
-  justify-content:center;
-}
-
-#ban1 {
-    height: 180px;
-    background-size: cover;
-    background-repeat: none;
-    background-position: center;
-    min-height: 100%;
-    position: relative;
-    width: 100%;
-    overflow: auto;
-    -webkit-overflow-scrolling: touch;
-    -webkit-perspective: 400px;
-    -o-perspective: 200px;
-    perspective: 100px;
-    margin-bottom: 20px;
-}
-
-.ban1 {
-    background: url(/assets/img/team-bg.jpg);
 }

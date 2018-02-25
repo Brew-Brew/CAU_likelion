@@ -1,28 +1,21 @@
-<div class="ban1" id="ban1">
-    <div class="center">
-          <img class="img-responsive imgsizerf" src="/assets/img/team-mbs-gr-ft2.png" alt="Faqlogo">
-    </div>
+<div class="team-ban">
+          <img class="team-image" src="/assets/img/team-mbs-gr-ft2.png" alt="Faqlogo">
 </div>
 
-<div class="template">
-
-
+<div class="app-template">
   <div class="alert alert-danger" role="alert">
     <p>Team<%=@teamid%></p>
   </div>
 
-
-
-  <table class="table" style="text-align: center">
-
-    <thead class="bg-light-yellow">
+  <table class="team-table">
+    <thead class="team-bg-light-yellow">
       <tr>
         <th colspan="6"><a><i class="xi-emoticon-devil xi-1x"></i>Team <%=@teamid%> 구성원들!<i class="xi-emoticon-devil xi-1x"></i></a></th>
       </tr>
     </thead>
 
     <thead>
-      <th colspan="3" class="bg-color-yellow">튜터</th>
+      <th colspan="3" class="team-table-header">튜터</th>
     </thead>
 
     <tbody>
@@ -31,18 +24,15 @@
           <td><%=user.name%><%=user.roles.last.name%></td>
         </tr>
       <% end %>
-      <th colspan="3" class="bg-color-yellow">튜티</th>
+      <th colspan="3" class="team-table-header">튜티</th>
       <% @users.each do |user| %>
         <tr>
           <td><%=user.name%><%=user.roles.last.name%></td>
         </tr>
       <% end %>
-
-
-
     </tbody>
 
-  <div class="pd-stu">
+  <div class="team-study">
     <%= link_to '스터디룸으로 이동하기', posts_path(@teamid), class: "btn btn-outline-warning" %>
   </div>
 </div>

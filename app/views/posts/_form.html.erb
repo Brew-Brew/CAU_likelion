@@ -11,25 +11,25 @@
     </div>
   <% end %>
 
-  <div class="actions">
-    <div class="form-group">
+  <div class="post-form">
+    <div class="post-form-group">
       <%= form.text_field :title, placeholder: "제목을 입력해 주세요.",class: "form-control col-md-8"%>
     </div>
     <br/>
-    <div class="form-group">
+    <div class="post-form-group">
       <%= tinymce :language => "ko" %>
       <%= form.text_area :content, id: :post_content, class: "form-control tinymce", rows: "10" %>
     </div>
 
-    <div class="form-group custom-file">
+    <div class="post-form-group custom-file">
       <%= form.file_field :attachment, id: "file", class: "custom-file-input", value: "파일 업로드"%>
       <span class="custom-file-control">파일업로드하기</span>
     </div>
     <%= form.hidden_field :team_id, :value => params[:teamid]%>
     <%= form.hidden_field :user_id, :value => current_user.id%>
     <br>
-    <div class="form-group">
+    <div class="post-form-group">
     <%= form.submit "글 작성하기", class: "form-control btn btn-warning", id: "form_white" %></a>
-    <div class="form-group">
+    <div class="post-form-group">
   </div>
 <% end %>

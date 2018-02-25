@@ -16,26 +16,60 @@
  *= require_self
  */
 
+// glyphicon을 적용하기 위해 import한것이다. bootstrap 4에서는 글리피콘이
+// 적용되지 않기 때문에, 아래와 같은 변수들을 import해주었다.
  @import "bootstrap-sprockets";
  @import "bootstrap";
+ /* Common Settings */
+ html {
+   font-size: 15px; /* 1rem === 15px */
+   line-height: 1.6; /* 보통 배율값을 적어준다. 24px/15px = 1.6 */
+ }
+
+ html,body {
+   height:100%;
+ }
+ //기존 pre는 bootstrap이 적용되어 임의의 style이 적용되는데, 그것을 방지하기위한 스타일링이다.
  pre {border: 0; background-color: transparent;}
- .template{
-   margin: 10rem 5rem;
+
+ section {
+   height:calc(90% - 50px);
+   height: 90vh;
+
  }
 
- .text-center {
-   text-align: center!important;
+ /*모든 요소*/
+ * {
+   font-family: 'Apple SD Gothic Neo', sans-serif;
+   color: #181818;
  }
 
- .page-heading {
-   font-family: 'Open Sans', sans-serif;
- }
- .user .a:link{
-   color:white;
- }
- .bg-gray-dark {
-   background-color: #eceeef;
- }
- .bg-light-yellow {
-   background-color: rgba(255,193,7,0.7);
+ .app{
+   &-template{
+     margin: 10rem 5rem;
+   }
+   &-user:link{
+     color:white;
+   }
+   &-bg-gray-dark {
+     background-color: #eceeef;
+   }
+   &-bg-light-yellow {
+     background-color: rgba(255,193,7,0.7);
+   }
+   &-user{
+     color:white;
+   }
+   &-brand {
+     margin: 0;
+     font-family: 'Kopub Batang', serif;
+     font-size: 1.33333333rem;
+     font-weight: 400;
+     line-height: 1;
+     a {
+       font-family: inherit;
+     }
+   }
+
+
  }

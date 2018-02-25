@@ -1,32 +1,81 @@
 // Place all the styles related to the Home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.home{
+  &-blq {
+      border-color: black;
+  }
+  &-logo {
+    display: flex;
+    height:100vh;
+    min-height:400px;
+    /* linear-gradient(방향, 시작점, 끝점)*/
+    background-image: url('/assets/bg-header.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  &-typestyle {
+    width: 1000px;
+    margin: auto;
+    justify-content: center!important;
+  }
+  &-var-highlight{
+      color: #C0AD60;
+      font-family: 'courier new';
 
-.var-highlight{
-    color: #C0AD60;
-    font-family: 'courier new';
+  }
+  &-string-highlight{
+      color: rgba(253, 149, 90, 0.8);
+      font-family: courier;
+  }
+  &-page-heading {
+    font-family: 'Open Sans', sans-serif;
+    text-align: center!important;
+  }
+  &-card{
+    &:hover .overlay{
+      width: 100%;
+    }
+    &-body {
+        -ms-flex: 1 1 auto;
+        flex: 1 1 auto;
+        padding: 0rem!important;
+        @extend .overlay;
+    }
+    &-img-top {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+    &-slogan {
+      font-size: 20px;
+    }
+    &-text {
+      color: white;
+      font-size: 20px;
+      position: absolute;
+      top: 70%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      white-space: nowrap;
+    }
+    &-title{
+      color: white;
+      font-size: 20px;
+      position: absolute;
+      top: 30%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      white-space: nowrap;
+    }
+  }
+
 
 }
-.string-highlight{
-    color: rgba(253, 149, 90, 0.8);
-    font-family: courier;
-}
 
-.blq {
-    border-color: black;
-}
-
-blockquote {
-    margin: 20px 0;
-    padding-left: 1.5rem;
-    border-left: 5px solid #ee6e73;
-}
-
-.typestyle {
-  width: 1000px;
-  margin: auto;
-  justify-content: center!important;
-}
 .overlay {
   position: absolute;
   bottom: 0;
@@ -37,62 +86,29 @@ blockquote {
   width: 0;
   height: 100%;
   transition: .5s ease;
-}
 
-.card-body {
-    -ms-flex: 1 1 auto;
-    flex: 1 1 auto;
-    padding: 0rem!important;
-}
-
-
-.card-img-top {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-.card:hover .overlay {
-  width: 100%;
-}
-
-p.card-text {
-  color: white;
-  font-size: 20px;
-  position: absolute;
-  top: 70%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  white-space: nowrap;
-}
-
-h5.card-title{
-  color: white;
-  font-size: 20px;
-  position: absolute;
-  top: 30%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  white-space: nowrap;
-}
-
-.card-slogan {
-  font-size: 20px;
 }
 
 #typewriter{
-        color: white;
-        font-size: 2em;
-        margin: 0;
-        font-family: "Courier New";
+          color: white;
+          font-size: 2em;
+          margin: 0;
+          font-family: "Courier New";
 
-        &:after{
-            content: "|";
-            animation: blink 500ms linear infinite alternate;
-        }
+          &:after{
+              content: "|";
+              animation: blink 500ms linear infinite alternate;
+          }
 }
+
+blockquote {
+    margin: 20px 0;
+    padding-left: 1.5rem;
+    border-left: 5px solid #ee6e73;
+}
+
+
+
 
 @-webkit-keyframes blink{
     0%{opacity: 0;}

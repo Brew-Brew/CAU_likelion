@@ -1,15 +1,15 @@
-<div class="template">
+<div class="app-template">
 <p id="notice"><%= notice %></p>
 
 <h1><%=@teamid%>팀의 스터디방</h1>
 
 <table class="table table-hover">
   <thead>
-    <tr>
+    <tr >
       <th scope="cols" colspan=10% >Num</th>
       <th scope="cols" colspan=50% >제목</th>
       <th scope="cols" colspan=10%>작성자</th>
-      <th scope="cols" colspan=30% id="theader-manage">관리</th>
+      <th class="post-header" scope="cols" colspan=30%>관리</th>
     </tr>
   </thead>
 
@@ -26,7 +26,7 @@
             <% @user = User.where(:id => post.user_id).first%>
             <%= @user.name %>
         </td>
-        <td colspan=30% id="theader-manage">
+        <td colspan=30% class="post-header">
         <%= link_to 'Show', post_path(@teamid,post), class: "btn btn-outline-warning"%>
         <%= link_to 'Edit', edit_post_path(@teamid,post), class: "btn btn-outline-warning" %>
         <%= link_to 'Destroy', destroy_path(@teamid,post), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-outline-warning" %>
