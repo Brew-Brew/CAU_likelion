@@ -16,6 +16,33 @@
       <%= link_to 'Edit', edit_post_path(@teamid,@post) %> |
       <%= link_to 'Back', posts_path %>
     </div>
+    
+    <h2>댓글</h2>
+    <% @post.comments.each do |comment| %>
+      <p>
+        <b>댓쓴이</b>
+        <%= comment.commenter %>
+      </p> 
+      <p>
+        <%= comment.body %>
+      </p>
+    <% end %>
+    
+    <h2>댓글등록</h2>
+    <%= form_for([@post, @post.comments.build]) do |f| %>
+      <div class="field">
+        <%= f.label :commenter %><br />
+        <%= f.text_field :commenter %>
+      </div>
+      <div class="field">
+        <%= f.label :body %><br />
+        <%= f.text_area :body %>
+      </div>
+      <div class="actions">
+        <%= f.submit %>
+      </div>
+    <% end %>
+    
   </div>
 
 </div>

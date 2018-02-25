@@ -18,8 +18,8 @@
 
 // glyphicon을 적용하기 위해 import한것이다. bootstrap 4에서는 글리피콘이
 // 적용되지 않기 때문에, 아래와 같은 변수들을 import해주었다.
- @import "bootstrap-sprockets";
- @import "bootstrap";
+ //@import "bootstrap-sprockets";
+ //@import "bootstrap";
  /* Common Settings */
  html {
    font-size: 15px; /* 1rem === 15px */

@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   #device 관련 route
   devise_for :users
-  #resources :posts
+
   # home 관련 route
   get 'home/index'
   #contact 관련 route
@@ -18,6 +18,12 @@ Rails.application.routes.draw do
   get 'teams/:teamid/posts/:id' => 'posts#show', as: 'post'
   patch 'teams/:teamid/posts/:id' => 'posts#update'
   delete 'teams/:teamid/posts/:id' => 'posts#destroy', as: 'destroy'
+  
+  #resources :posts
+  resources :posts do
+    resources :comments
+  end
+  
 
   # user 관련 route
   get 'user/index'
