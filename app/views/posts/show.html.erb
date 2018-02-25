@@ -1,9 +1,9 @@
 <div class="app-template">
-  <div class="card text-center">
-    <div class="card-header">
+  <div class="card ">
+    <div class="post-title card-header text-center">
       <h1><%=@post.title%><h1>
     </div>
-    <div class="card-block">
+    <div class="post-content">
       <%=@post.content.html_safe%>
     </div>
     <div class="card-footer text-muted">
@@ -12,6 +12,7 @@
       <% else %>
       <%= link_to "Download file - #{File.basename(@post.attachment_url)}", @post.attachment_url %>
       <% end %>
+      <br/>
       <%= link_to 'Edit', edit_post_path(@teamid,@post) %> |
       <%= link_to 'Back', posts_path %>
     </div>

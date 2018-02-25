@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   get 'contact'=> 'home#contact'
   post 'contact/create' =>'home#create'
   get 'contact/complete' => 'home#complete'
-  get 'contact/admincontact' => 'home#admincontact'
+  get 'contact/admincontact' => 'home#admincontact', as: 'contact_admin'
   get 'contact/admincshow/:contact_id' => 'home#admincshow'
   #post 관련 route
   get 'teams/:teamid/posts' => 'posts#index', as: 'posts'

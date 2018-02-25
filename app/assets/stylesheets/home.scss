@@ -75,8 +75,15 @@
       white-space: nowrap;
     }
   }
+  &-complete{
+    text-align: center;
+    &-icon{
+      margin-left: auto;
+      font-size: 100px;
+      color: #2a9031;
+    }
 
-
+  }
 }
 
 .overlay {
