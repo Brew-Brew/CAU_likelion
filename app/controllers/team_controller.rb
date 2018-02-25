@@ -16,4 +16,11 @@ class TeamController < ApplicationController
     user.add_role :student # sets a global role
     redirect_back(fallback_location: root_path)
   end
+
+  def selectTeam
+    @teamnum=params[:teamid]
+    current_user.team_id = @teamnum
+    current_user.save
+    redirect_back(fallback_location: root_path)
+  end
 end

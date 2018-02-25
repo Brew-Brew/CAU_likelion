@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
-  #device 관련 route
-  devise_for :users
+  #device 관련 route +구글인증
+  devise_for :users, controllers: { omniauth_callbacks: 'omniauth_callbacks' }
   #resources :posts
   # home 관련 route
   get 'home/index'
+
   #contact 관련 route
   get 'contact'=> 'home#contact'
   post 'contact/create' =>'home#create'
@@ -27,6 +28,8 @@ Rails.application.routes.draw do
   post 'teams/admin' => 'team#admin', as: 'admin'
   post 'teams/student' => 'team#student', as: 'student'
   get 'secret' => 'team#secret'
+  post 'selectTeam/:teamid' => 'team#selectTeam', as: 'team'
+
 
   #root 연결
   root 'home#index'
