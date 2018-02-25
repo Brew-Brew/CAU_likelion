@@ -20,6 +20,12 @@ Rails.application.routes.draw do
   patch 'teams/:teamid/posts/:id' => 'posts#update'
   delete 'teams/:teamid/posts/:id' => 'posts#destroy', as: 'destroy'
 
+  #resources :posts
+  resources :posts do
+    resources :comments
+  end
+
+
   # user 관련 route
   get 'user/index'
 
