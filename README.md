@@ -156,3 +156,20 @@ mypage와 같은 기능이다.
 -secret **(GET: secret)**
 
 유저권한설정과 같은 비밀스러운 작업을 할때 사용할 페이지이다.
+
+### scss 파일구조
+
+- 컨트롤러들은 해당하는 뷰를 레일스에서 갖게 되는데,기본으로 scss파일을 제공하게 된다.
+- http://ideveloper2.tistory.com/36 참고
+- 아래와 같은 패턴으로 작성되어있다.
+
+```
+.controller{
+  &-class{
+    ...
+    &-semi-class{
+
+    }
+  }
+}
+```
