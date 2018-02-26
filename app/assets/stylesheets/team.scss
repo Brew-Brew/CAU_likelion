@@ -20,16 +20,28 @@
       margin-bottom: 20px;
       background: url(/assets/img/team-bg.jpg);
   }
+  &-studyButton{
+    text-align: center;
+    margin-top: 3rem;
+  }
+  &-blq {
+      border-color: rgba(255,193,7,0.7);
+      margin-bottom: 5rem;
+  }
   &-bg-gray-dark {
     @extend .app-bg-gray-dark;
   }
   &-bg-light-yellow {
+    height: 5rem;
     @extend .app-bg-light-yellow;
   }
   &-table{
     text-align: center;
-    width: 100%;
+    width: 50rem;
+    margin: auto;
+    padding: 3rem 3rem;
     &-header {
+      height: 3rem;
       background-color: rgb(255, 232, 186);
     }
     thead > tr > th {
