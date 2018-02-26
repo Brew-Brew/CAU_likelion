@@ -28,8 +28,8 @@
       </p>
       
       <p>
-        <%= link_to 'X', [comment.post, comment],
-                     :confirm => 'Are you sure?',
+        <%= link_to 'X',  [comment.post, comment],
+                     :confirm => '정말 지울거에영?',
                      :method => :delete %>
       </p>
     <% end %>
@@ -40,7 +40,6 @@
         <b><%= f.label :작성자 %></b> <%= current_user.name%>
       </div>
       <div class="field">
-        <%= f.label :body %><br />
         <%= f.text_area :body %>
       </div>
       <div class="actions">
