@@ -120,7 +120,7 @@
     background-image: url('/assets/bg-contact.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center center; 
+    background-position: center center;
   }
 
   &-title {
@@ -129,6 +129,10 @@
     font-family: "Courier";
     font-size: 100px;
     color: white;
+  }
+  &-blq {
+      border-color: rgba(255,193,7,0.7);
+      margin: 5rem 5rem;
   }
 }
 

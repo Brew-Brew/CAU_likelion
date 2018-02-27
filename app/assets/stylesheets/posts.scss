@@ -12,4 +12,14 @@
   &-form-group{
     margin: 1rem;
   }
+  &-logo {
+      display: flex;
+      height:100vh;
+      min-height:400px;
+      /* linear-gradient(방향, 시작점, 끝점)*/
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-image: url('/assets/img/team-bg.jpg');
+  }
 }

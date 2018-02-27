@@ -4,21 +4,15 @@
 @import  "application.scss";
 
 .team{
-  &-ban {
-      height: 180px;
+  &-logo {
+      display: flex;
+      height:100vh;
+      min-height:400px;
+      /* linear-gradient(방향, 시작점, 끝점)*/
       background-size: cover;
-      background-repeat: none;
-      background-position: center;
-      min-height: 100%;
-      position: relative;
-      width: 100%;
-      overflow: auto;
-      -webkit-overflow-scrolling: touch;
-      -webkit-perspective: 400px;
-      -o-perspective: 200px;
-      perspective: 100px;
-      margin-bottom: 20px;
-      background: url(/assets/img/team-bg.jpg);
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-image: url('/assets/img/team-bg.jpg');
   }
   &-studyButton{
     text-align: center;
