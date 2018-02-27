@@ -24,7 +24,10 @@ class PostsController < ApplicationController
 
   # GET /posts/1/edit
   def edit
-
+    if @post.user_id != current_user.id
+      redirect_back(fallback_location: root_path)
+    else
+    end
   end
 
   # POST /posts
@@ -45,24 +48,29 @@ class PostsController < ApplicationController
   # PATCH/PUT /posts/1
   # PATCH/PUT /posts/1.json
   def update
-    respond_to do |format|
-      if @post.update(post_params)
-        format.html { redirect_to post_path(@post.team_id,@post), notice: 'Post was successfully updated.' }
-        format.json { render :show, status: :ok, location: @post }
-      else
-        format.html { render :edit }
-        format.json { render json: @post.errors, status: :unprocessable_entity }
+      respond_to do |format|
+        if @post.update(post_params)
+          format.html { redirect_to post_path(@post.team_id,@post), notice: 'Post was successfully updated.' }
+          format.json { render :show, status: :ok, location: @post }
+        else
+          format.html { render :edit }
+          format.json { render json: @post.errors, status: :unprocessable_entity }
+        end
       end
-    end
   end
 
   # DELETE /posts/1
   # DELETE /posts/1.json
   def destroy
-    @post.destroy
-    respond_to do |format|
-      format.html { redirect_to posts_path, notice: 'Post was successfully destroyed.' }
-      format.json { head :no_content }
+    if @post.user_id != current_user.id
+      flash.now[:alert] = '본인만 이글을 삭제할 수있습니다!'
+      redirect_back(fallback_location: root_path)
+    else
+      @post.destroy
+      respond_to do |format|
+        format.html { redirect_to posts_path, notice: 'Post was successfully destroyed.' }
+        format.json { head :no_content }
+      end
     end
   end
 
