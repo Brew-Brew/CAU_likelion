@@ -13,9 +13,9 @@
 //= require jquery_ujs
 //= require rails-ujs
 //= require_self
-//= require_tree .
 //= //= require tinymce
 //= require tinymce-jquery
+//= require_tree .
 function setupTypewriter(t) {
         var HTML = t.innerHTML;
 
