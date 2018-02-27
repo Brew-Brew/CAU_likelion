@@ -6,25 +6,23 @@
     <%= link_to 'Show contact', contact_admin_path, class: "btn btn-outline-warning" %>
   </div>
 <% else %>
+<section class="contact-logo">
+  <p class="contact-title" style="color: #ff7f00">We're</p>
+  <p class="contact-title">______</p>
+  <p class="contact-title" style="color: #FFBF00">Lion</p>
+</section>
   <div class="app-template">
     <form action="/contact/create" method="post">
-        <!-- <p>제목</p>
-        <input type="text" name="email">
-
-        <p>내용</p>
-        <input type="text" name="content"> -->
 
         <div class="form-group">
           <label for="exampleInputEmail1">Email address</label>
-          <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+          <input type="email" name="email" class="form-control col-4" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
         </br>
           <label for="exampleFormControlTextarea1">내용</label>
-          <textarea class="form-control" name="content" rows="3"></textarea>
+          <textarea class="form-control" name="content" rows="100"></textarea>
         </div>
 
-
-        <p>제출</p>
-        <input type="submit">
+        <button type="submit" class="btn btn-outline-warning">제출하기</button>
     </form>
   </div>
 

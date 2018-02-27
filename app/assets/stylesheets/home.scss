@@ -1,6 +1,19 @@
 // Place all the styles related to the Home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@font-face {
+  font-family: "Adamas-Regular";
+    src: asset-url('Adamas-Regular.eot');
+    src: asset-url('Adamas-Regular?#iefix') format('embedded-opentype'),
+           asset-url('Adamas-Regular.woff') format('woff'),
+           asset-url('Adamas-Regular.ttf') format('truetype'),
+           asset-url('Adamas-Regular.svg#action_manregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 .home{
   &-container{
     margin-top: 5rem;
@@ -98,6 +111,27 @@
   transition: .5s ease;
 
 }
+.contact {
+  &-logo {
+    display: flex;
+    height:100vh;
+    min-height:400px;
+    /* linear-gradient(방향, 시작점, 끝점)*/
+    background-image: url('/assets/bg-contact.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center; 
+  }
+
+  &-title {
+    margin: auto;
+    justify-content: center!important;
+    font-family: "Courier";
+    font-size: 100px;
+    color: white;
+  }
+}
+
 
 #typewriter{
           color: white;
