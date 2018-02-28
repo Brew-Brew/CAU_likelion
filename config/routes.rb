@@ -27,7 +27,7 @@ Rails.application.routes.draw do
 
 
   # user 관련 route
-  get 'user/index'
+  get 'users/:id' => 'user#index'
 
   # 팀관련 route
   get 'teams/:teamid' => 'team#index'

@@ -4,7 +4,14 @@ class HomeController < ApplicationController
   end
 
   def contact
+    @users=User.all
+    respond_to do |format|
+    format.html
+    format.json {
+        render :json => @users
+    }
   end
+end
 
   def create
     @contact = Contact.new

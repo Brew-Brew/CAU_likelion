@@ -2,11 +2,11 @@
 <html>
   <head>
     <title lang="ko">CAU-LION :: 멋쟁이사자처럼 중앙대학교</title>
-    <%= javascript_include_tag "application" %>
+    <%= javascript_include_tag 'application' %>
     <%= yield(:head) %>
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag  "application" %>
-
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
     <!-- fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/kopubbatang.css">
@@ -57,7 +57,8 @@
       </div>
       <div class="app-user">
         <% if user_signed_in? %>
-          <a class="app-user col-6" href="/user/index"><%= current_user.name%></a>
+          <span class="app-user col-6" ><%= current_user.name%></span>
+          <a class="app-user col-6" href="/users/<%= current_user.id %>">MyPage</a>
           <a class="app-user col-6" href="/users/sign_out">로그아웃</a>
         <% else %>
           <a class="app-user col-6" href="/users/sign_in">로그인</a>
@@ -83,83 +84,6 @@
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 
         <script>
-          window.addEventListener('scroll', function() {
-          var el = document.querySelector('.transparent-nav');
-          if(window.scrollY >= 650) el.classList.add('visible');
-          else el.classList.remove('visible');
-          });
-
-
-          function setupTypewriter(t) {
-                  var HTML = t.innerHTML;
-
-                  t.innerHTML = "";
-
-                  var cursorPosition = 0,
-                      tag = "",
-                      writingTag = false,
-                      tagOpen = false,
-                      typeSpeed = 100,
-                  tempTypeSpeed = 0;
-
-                  var type = function() {
-
-                      if (writingTag === true) {
-                          tag += HTML[cursorPosition];
-                      }
-
-                      if (HTML[cursorPosition] === "<") {
-                          tempTypeSpeed = 0;
-                          if (tagOpen) {
-                              tagOpen = false;
-                              writingTag = true;
-                          } else {
-                              tag = "";
-                              tagOpen = true;
-                              writingTag = true;
-                              tag += HTML[cursorPosition];
-                          }
-                      }
-                      if (!writingTag && tagOpen) {
-                          tag.innerHTML += HTML[cursorPosition];
-                      }
-                      if (!writingTag && !tagOpen) {
-                          if (HTML[cursorPosition] === " ") {
-                              tempTypeSpeed = 0;
-                          }
-                          else {
-                              tempTypeSpeed = (Math.random() * typeSpeed) + 10;
-                          }
-                          t.innerHTML += HTML[cursorPosition];
-                      }
-                      if (writingTag === true && HTML[cursorPosition] === ">") {
-                          tempTypeSpeed = (Math.random() * typeSpeed) + 50;
-                          writingTag = false;
-                          if (tagOpen) {
-                              var newSpan = document.createElement("span");
-                              t.appendChild(newSpan);
-                              newSpan.innerHTML = tag;
-                              tag = newSpan.firstChild;
-                          }
-                      }
-
-                      cursorPosition += 1;
-                      if (cursorPosition < HTML.length - 1) {
-                          setTimeout(type, tempTypeSpeed);
-                      }
-
-                  };
-
-                  return {
-                      type: type
-                  };
-              }
-
-              var typer = document.getElementById('home-typewriter');
-
-              typewriter = setupTypewriter(typewriter);
-
-              typewriter.type();
 
         </script>
 

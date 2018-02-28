@@ -122,6 +122,21 @@
     background-repeat: no-repeat;
     background-position: center center;
   }
+  &-typewriter {
+    margin: auto;
+    justify-content: center!important;
+    h1 > div{
+    color: #fff;
+    font-family: monospace;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation:
+      blink-caret .5s step-end infinite;
+  }
+}
 
   &-title {
     margin: auto;
