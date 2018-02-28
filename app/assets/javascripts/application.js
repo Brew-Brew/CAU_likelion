@@ -10,79 +10,101 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require jquery
 //= require jquery_ujs
 //= require rails-ujs
 //= require_self
-//= //= require tinymce
+//= require tinymce
 //= require tinymce-jquery
 //= require_tree .
-function setupTypewriter(t) {
-        var HTML = t.innerHTML;
 
-        t.innerHTML = "";
 
-        var cursorPosition = 0,
-            tag = "",
-            writingTag = false,
-            tagOpen = false,
-            typeSpeed = 100,
-        tempTypeSpeed = 0;
+$(document).ready(function() {
 
-        var type = function() {
+  window.addEventListener('scroll', function() {
+  var el = document.querySelector('.transparent-nav');
+  if(window.scrollY >= 650) el.classList.add('visible');
+  else el.classList.remove('visible');
+  });
 
-            if (writingTag === true) {
-                tag += HTML[cursorPosition];
-            }
+  var text = ['승규','민경', '정우', '지선','효광','동우'];
+  function callMe(){
+    var myText = document.getElementById('mytext');
+    var curIdx = text.indexOf(myText.innerHTML);
+    myText.innerHTML = text[(curIdx+1)%text.length];
+  }
+  setInterval(callMe,1000);
 
-            if (HTML[cursorPosition] === "<") {
-                tempTypeSpeed = 0;
-                if (tagOpen) {
-                    tagOpen = false;
-                    writingTag = true;
-                } else {
-                    tag = "";
-                    tagOpen = true;
-                    writingTag = true;
-                    tag += HTML[cursorPosition];
-                }
-            }
-            if (!writingTag && tagOpen) {
-                tag.innerHTML += HTML[cursorPosition];
-            }
-            if (!writingTag && !tagOpen) {
-                if (HTML[cursorPosition] === " ") {
-                    tempTypeSpeed = 0;
-                }
-                else {
-                    tempTypeSpeed = (Math.random() * typeSpeed) + 50;
-                }
-                t.innerHTML += HTML[cursorPosition];
-            }
-            if (writingTag === true && HTML[cursorPosition] === ">") {
-                tempTypeSpeed = (Math.random() * typeSpeed) + 50;
-                writingTag = false;
-                if (tagOpen) {
-                    var newSpan = document.createElement("span");
-                    t.appendChild(newSpan);
-                    newSpan.innerHTML = tag;
-                    tag = newSpan.firstChild;
-                }
-            }
+  function setupTypewriter(t) {
+          var HTML = t.innerHTML;
 
-            cursorPosition += 1;
-            if (cursorPosition < HTML.length - 1) {
-                setTimeout(type, tempTypeSpeed);
-            }
+          t.innerHTML = "";
 
-        };
+          var cursorPosition = 0,
+              tag = "",
+              writingTag = false,
+              tagOpen = false,
+              typeSpeed = 100,
+          tempTypeSpeed = 0;
 
-        return {
-            type: type
-        };
-    }
+          var type = function() {
 
-    var typer = document.getElementById('typewriter');
+              if (writingTag === true) {
+                  tag += HTML[cursorPosition];
+              }
 
-    typewriter = setupTypewriter(typewriter);
+              if (HTML[cursorPosition] === "<") {
+                  tempTypeSpeed = 0;
+                  if (tagOpen) {
+                      tagOpen = false;
+                      writingTag = true;
+                  } else {
+                      tag = "";
+                      tagOpen = true;
+                      writingTag = true;
+                      tag += HTML[cursorPosition];
+                  }
+              }
+              if (!writingTag && tagOpen) {
+                  tag.innerHTML += HTML[cursorPosition];
+              }
+              if (!writingTag && !tagOpen) {
+                  if (HTML[cursorPosition] === " ") {
+                      tempTypeSpeed = 0;
+                  }
+                  else {
+                      tempTypeSpeed = (Math.random() * typeSpeed) + 10;
+                  }
+                  t.innerHTML += HTML[cursorPosition];
+              }
+              if (writingTag === true && HTML[cursorPosition] === ">") {
+                  tempTypeSpeed = (Math.random() * typeSpeed) + 50;
+                  writingTag = false;
+                  if (tagOpen) {
+                      var newSpan = document.createElement("span");
+                      t.appendChild(newSpan);
+                      newSpan.innerHTML = tag;
+                      tag = newSpan.firstChild;
+                  }
+              }
 
-    typewriter.type();
+              cursorPosition += 1;
+              if (cursorPosition < HTML.length - 1) {
+                  setTimeout(type, tempTypeSpeed);
+              }
+
+          };
+
+          return {
+              type: type
+          };
+      }
+
+      var typer = document.getElementById('typewriter');
+
+      typewriter = setupTypewriter(typewriter);
+
+      typewriter.type();
+
+
+});
