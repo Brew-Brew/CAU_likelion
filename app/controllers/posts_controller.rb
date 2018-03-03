@@ -3,7 +3,7 @@ class PostsController < ApplicationController
   before_action :set_teamid
   # user 로그인 여부 체크
   before_action :authenticate_user!
-  before_action :authenticate_user!, only: [:show, :new, :edit, :destroy]
+  before_action :authenticate_user!, only: [:index,:show, :new, :edit, :destroy]
 
   # GET /posts
   # GET /posts.json
