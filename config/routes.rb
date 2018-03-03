@@ -35,6 +35,7 @@ Rails.application.routes.draw do
   post 'teams/student' => 'team#student', as: 'student'
   get 'secret' => 'team#secret'
   post 'selectTeam/:teamid' => 'team#selectTeam', as: 'team'
+  get 'onlycau' => 'team#only_cau'
 
 
   #root 연결

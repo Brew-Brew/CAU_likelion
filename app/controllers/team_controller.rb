@@ -19,6 +19,10 @@ class TeamController < ApplicationController
     redirect_back(fallback_location: root_path)
   end
 
+  def only_cau
+    
+  end
+
   def selectTeam
     @teamnum=params[:teamid]
     current_user.team_id = @teamnum

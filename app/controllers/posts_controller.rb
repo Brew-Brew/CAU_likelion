@@ -5,6 +5,7 @@ class PostsController < ApplicationController
   before_action :authenticate_user!
   before_action :authenticate_user!, only: [:index,:show, :new, :edit, :destroy]
 
+  before_action :check_user_in_cau
   # GET /posts
   # GET /posts.json
   def index
@@ -80,7 +81,18 @@ class PostsController < ApplicationController
       @post = Post.find(params[:id])
     end
     def set_teamid
-        @teamid=params[:teamid]
+      @teamid=params[:teamid]
+    end
+    #cau 팀학생인지 check 한다.팀번호가 없으면 cau학생만 이용가능하다는 페이지로 이동한다.
+    def check_user_in_cau
+      if user_signed_in?
+        @user_team=current_user.id
+        if([1,2,3].include? @user_team)
+        else
+          redirect_to '/onlycau'
+        end
+      end
+
     end
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
