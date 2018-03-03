@@ -180,9 +180,27 @@ small, .small {
   font-size: 80%;
 }
 
+.login{
+  &-template{
+  font-weight: 800;
+  border-radius: 30px;
+  padding-top: 15rem;
+  text-align: center;
+  background-color: rgba( 255, 255, 255, 0.5 );
+  width: 50rem;
+  height: 50rem;
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%, -50%)
+  }
 
+}
 
+body.login{
 
+  background: url('/assets/img/team-bg.jpg') no-repeat center center fixed; -webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover;
+}
 
 
 
