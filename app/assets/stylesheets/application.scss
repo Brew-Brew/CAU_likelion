@@ -40,10 +40,24 @@
 
  }
 
- /*모든 요소*/
+ .footer {
+  text-align: center;
+  padding: 2rem 10rem;
+  background-color: #313131;
+  &-icon{
+    margin-bottom: 3rem;
+  }
+  *{
+     color: white;
+   }
+  span,p{
+     color: #ffffff;
+   }
+ }
+ /*모든
+  요소*/
  * {
    font-family: 'Apple SD Gothic Neo', sans-serif;
-   color: #181818;
  }
 
  .app{
