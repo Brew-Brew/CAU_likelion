@@ -19,6 +19,7 @@ Rails.application.routes.draw do
   get 'teams/:teamid/posts/:id' => 'posts#show', as: 'post'
   patch 'teams/:teamid/posts/:id' => 'posts#update'
   delete 'teams/:teamid/posts/:id' => 'posts#destroy', as: 'destroy'
+  post 'teams/post/:post_id/like' => 'posts#like_toggle'
 
   #resources :posts
   resources :posts do
@@ -35,6 +36,7 @@ Rails.application.routes.draw do
   post 'teams/student' => 'team#student', as: 'student'
   get 'secret' => 'team#secret'
   post 'selectTeam/:teamid' => 'team#selectTeam', as: 'team'
+  get 'onlycau' => 'team#only_cau'
 
 
   #root 연결

@@ -12,6 +12,16 @@
   &-form-group{
     margin: 1rem;
   }
+  &-like{
+    button{
+      border-style:solid;
+      border-color:black;
+    }
+    &-img{
+      width: 1em;
+      height: 1em;
+    }
+  }
   &-logo {
       display: flex;
       height:100vh;
@@ -21,5 +31,8 @@
       background-repeat: no-repeat;
       background-position: center center;
       background-image: url('/assets/img/team-bg.jpg');
+  }
+  &-comment-container{
+    margin: 3rem 3rem;
   }
 }

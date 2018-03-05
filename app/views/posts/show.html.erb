@@ -1,3 +1,9 @@
+<section class="team-logo">
+  <div class="team-typewriter">
+    <h1>WELCOME TO CAU-LION<br>
+      멋쟁이 사자처럼 TEAM <%=@teamid%> 스터디방입니다.</h1>
+  </div>
+</section>
 <div class="app-template">
   <div class="card ">
     <div class="post-title card-header text-center">
@@ -6,47 +12,79 @@
     <div class="post-content">
       <%=@post.content.html_safe%>
     </div>
+    <div class="post-like">
+      <p>
+        <strong>Like:</strong>
+        <%= @post.likes.size %> 명이 좋아합니다.
+      </p>
+
+      <p>
+        <% if current_user.is_like? (@post) %>
+        <form action='/teams/post/<%= @post.id%>/like' method='post'>
+        <button class="btn btn-default"> 좋아요 취소 </button>
+        </form>
+
+        <% else %>
+        <form action='/teams/post/<%= @post.id%>/like' method='post'>
+        <button class="btn btn-default"> <img src="/assets/img/like.png" alt="" class="post-like-img">좋아요</button>
+        </form>
+
+        <% end %>
+      </p>
+    </div>
+
+
     <div class="card-footer text-muted">
       <% if (@post.attachment.blank?) %>
 
       <% else %>
-      <%= link_to "Download file - #{File.basename(@post.attachment_url)}", @post.attachment_url %>
+      <%= link_to "Download file", @post.attachment_url %>
       <% end %>
       <br/>
       <%= link_to 'Edit', edit_post_path(@teamid,@post) %> |
       <%= link_to 'Back', posts_path %>
     </div>
-    
-    <h2>댓글</h2>
-    <% @post.comments.each do |comment| %>
-      <p>
-        <b>댓쓴이</b>
-        <%= comment.commenter %>
-      </p> 
-      <p>
-        <%= comment.body %>
-      </p>
-      
-      <p>
-        <%= link_to 'X',  [comment.post, comment],
-                     :confirm => '정말 지울거에영?',
-                     :method => :delete %>
-      </p>
-    <% end %>
-    
-    <h2>댓글등록</h2>
-    <%= form_for([@post, @post.comments.build]) do |f| %>
-      <div class="field">
-        <b><%= f.label :작성자 %></b> <%= current_user.name%>
-      </div>
-      <div class="field">
-        <%= f.text_area :body %>
-      </div>
-      <div class="actions">
-        <%= f.submit %>
-      </div>
-    <% end %>
-    
+
+
+    <div class="post-comment-container">
+      <h2>Comments</h2>
+      <% @post.comments.each do |comment| %>
+        <p>
+          <b>댓쓴이</b>
+          <%= comment.commenter %>
+        </p>
+        <div class="row">
+          <div class="col-md-8">
+            <p>
+              <%= comment.body %>
+            </p>
+          </div>
+          <div class="col-md-4">
+            <p>
+              <%= link_to 'X',  [comment.post, comment],
+                           :confirm => '정말 지울거에영?',
+                           :method => :delete %>
+            </p>
+          </div>
+
+        </div>
+
+      <% end %>
+
+      <%= form_for([@post, @post.comments.build]) do |f| %>
+        <div class="field">
+          <b><%= f.label :작성자 %></b> <%= current_user.name%>
+        </div>
+        <div class="field">
+          <%= f.text_area :body,cols: 100%>
+        </div>
+        <div class="actions">
+          <%= f.submit %>
+        </div>
+      <% end %>
+    </div>
+
+
   </div>
 
 </div>
