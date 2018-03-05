@@ -35,6 +35,19 @@
     width: 1000px;
     margin: auto;
     justify-content: center!important;
+    &-a{
+      display: inline-block;
+      margin-top: 20px;
+      padding:10px 30px;
+      border: solid 3px currentColor;
+      border-radius: 6px;
+      background-color: #BF6A7A;
+      background-color: var(--accent-color);
+      color: #fff;
+      color: var(--text-bright-color);
+      font-size: 14px;
+      text-decoration: none;
+    }
   }
   &-var-highlight{
       color: #C0AD60;
