@@ -2,6 +2,7 @@
 <html>
   <head>
     <title lang="ko">CAU-LION :: 멋쟁이사자처럼 중앙대학교</title>
+
     <%= javascript_include_tag 'application' %>
     <%= yield(:head) %>
     <%= csrf_meta_tags %>
@@ -61,8 +62,8 @@
           <a class="app-user col-6" href="/users/sign_out">로그아웃</a>
         <% else %>
           <a class="app-user col-6" href="/users/sign_in">로그인</a>
+          <a class="app-user col-6" href="/users/sign_up">회원가입</a>
         <% end %>
-      </div>
       </div>
     </nav>
 
@@ -74,26 +75,9 @@
       </div>
       <!-- jQuery CDN -->
       <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-
-
       <!-- bootstrap CDN -->
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-
-  </body>
-<!-- footer -->
-  <footer class ="footer">
-  <div class="footer-container">
-    <div class="footer-icon">
-      <a href="https://www.facebook.com/LikelionCAU/" class="card-link"><i class="xi-facebook-official xi-3x"></i></a>
-      <a href="https://likelion.net/" class="card-link"><i class="xi-emoticon-cool xi-3x"></i></a>
     </div>
-
-    <span class="copyright">Copyright © Chung-Ang Univ. Likelion 6기 운영진</span>
-
-
-  </div>
-</footer>
-
+  </body>
 </html>
