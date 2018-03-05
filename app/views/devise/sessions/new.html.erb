@@ -1,18 +1,26 @@
-<body class="container login">
-<div class="login-bg">
-  <div class="login-template">
-      <h2>Are you in CAU-likelion?</h2>
 
-      <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-        <div class="login-form-inputs">
-          <%= f.input :email, class: "form-control",placeholder:"Enter email",required: false, autofocus: true,label: false %>
-          <%= f.input :password, placeholder:"Enter password",required: false,label: false %>
-          <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
-        </div>
-        <div class="form-actions">
-          <%= f.button :submit, "Log in" %>
-        </div>
-      <% end %>
-      <%= render "devise/shared/links" %>
+
+<body class="container login">
+  <div class="login-bg">
+    <div class="login-wrapper">
+      
+        <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+          <div class="login-form-inputs">
+            <label class="label" for="user_email">
+              EMAIL 
+            </label>
+            <%= f.input :email, class: "form-control",placeholder:"ex) caulion@likelion.org",required: false, autofocus: true,label: false %>
+            <label for="user_password" class="label">
+              비밀번호
+            </label>
+            <%= f.input :password, placeholder:"",required: false,label: false %>
+            <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+          </div>
+          <div class="form-actions">
+            <%= f.button :submit, "로그인" %>
+          </div>
+        <% end %>
+        <%= render "devise/shared/links" %>
+    </div>
   </div>
-</div>
+</body>

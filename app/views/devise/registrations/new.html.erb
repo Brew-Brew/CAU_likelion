@@ -7,11 +7,11 @@
         <%= f.error_notification %>
 
         <div class="login-form-inputs">
-          <%= f.input :email, autofocus: true,label: false,placeholder:"Enter email" %>
-          <%= f.input :name, autofocus: true,label: false,placeholder:"Enter name" %>
-          <%= f.input :team_id, required: true, autofocus: true,label: false,placeholder:"Enter teamid" %>
-          <%= f.input :password,placeholder:"Enter password", required: true,label: false %>
-          <%= f.input :password_confirmation,placeholder:"Enter password again",label: false, required: true %>
+          <%= f.input :email, autofocus: true,label: false,placeholder:"EMAIL" %>
+          <%= f.input :name, autofocus: true,label: false,placeholder:"NAME" %>
+          <%= f.input :team_id, required: true, autofocus: true,label: false,placeholder:"TEAM ID" %>
+          <%= f.input :password,placeholder:"PASSWORD", required: true,label: false %>
+          <%= f.input :password_confirmation,placeholder:"비밀번호를 다시 입력하세요",label: false, required: true %>
         </div>
         <%= render "devise/shared/links" %>
         <div class="form-actions">

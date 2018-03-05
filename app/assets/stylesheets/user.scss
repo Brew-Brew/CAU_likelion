@@ -183,20 +183,17 @@ small, .small {
   font-size: 80%;
 }
 
-.login{
-  &-template{
+.login-wrapper {
   font-weight: 800;
-  border-radius: 30px;
   padding-top: 15rem;
   text-align: center;
-  background-color: rgba( 255, 255, 255, 0.5 );
+  background-color: transparent;
   width: 50rem;
   height: 50rem;
   position:absolute;
   top:50%;
   left:50%;
   transform:translate(-50%, -50%)
-  }
 
 }
 
@@ -207,6 +204,18 @@ body.login{
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+
+.login input {
+  width: 25rem;
+  height: 50px;
+  padding-right: 10px;
+  padding-left: 10px;
+  border: #dee2e6 solid 1px;
+  border-radius: 2px;
+  background-color: rgba( 255, 255, 255, 0.5 );
+  font-weight: 400;
+  font-size: 15px;
 }
 
 
