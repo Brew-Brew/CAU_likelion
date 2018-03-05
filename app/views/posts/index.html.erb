@@ -1,3 +1,10 @@
+<section class="team-logo">
+  <div class="team-typewriter">
+    <h1>WELCOME TO CAU-LION<br>
+      멋쟁이 사자처럼 TEAM <%=@teamid%> 스터디방입니다.</h1>
+  </div>
+</section>
+
 <div class="app-template">
 <p id="notice"><%= notice %></p>
 
@@ -6,8 +13,9 @@
   <thead>
     <tr >
       <th scope="cols" colspan=10% >Num</th>
-      <th scope="cols" colspan=50% >제목</th>
+      <th scope="cols" colspan=40% >제목</th>
       <th scope="cols" colspan=10%>작성자</th>
+      <th scope="cols" colspan=10%><img src="/assets/img/like.png" alt="" class="post-like-img">Likes</th>
       <th class="post-header" scope="cols" colspan=30%>관리</th>
     </tr>
   </thead>
@@ -20,10 +28,13 @@
     <% @posts.each do |post| %>
 
         <td colspan=10% scope="row">1</th>
-        <td colspan=50% ><%=post.title%></td>
+        <td colspan=40% ><%=post.title%></td>
         <td colspan=10%>
             <% @user = User.where(:id => post.user_id).first%>
             <%= @user.name %>
+        </td>
+        <td colspan=10%>
+          <%= post.likes.size %>
         </td>
         <td colspan=30% class="post-header">
         <%= link_to 'Show', post_path(@teamid,post), class: "btn btn-outline-warning"%>

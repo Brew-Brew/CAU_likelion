@@ -6,14 +6,20 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable,
          :omniauthable, omniauth_providers: [:google_oauth2]
   has_many :posts
+  has_many :likes
   belongs_to :team
 
   after_create :assign_default_role
 
+ #좋아요 관련 메소드
+  def is_like? (post)
+  Like.find_by(user_id: self.id, post_id: post.id).present?
+  end
+  #유저 기본권한 설정 관련 메소드
   def assign_default_role
     self.add_role(:admin) if self.roles.blank?
   end
-
+ #구글 인증 관련 메소드
   def self.from_omniauth(access_token)
    data = access_token.info
    user = User.where(:email => data["email"]).first

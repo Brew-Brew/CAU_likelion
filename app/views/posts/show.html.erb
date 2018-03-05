@@ -6,6 +6,28 @@
     <div class="post-content">
       <%=@post.content.html_safe%>
     </div>
+    <div class="post-like">
+      <p>
+        <strong>Like:</strong>
+        <%= @post.likes.size %> 명이 좋아합니다.
+      </p>
+
+      <p>
+        <% if current_user.is_like? (@post) %>
+        <form action='/teams/post/<%= @post.id%>/like' method='post'>
+        <button class="btn btn-default"> 좋아요 취소 </button>
+        </form>
+
+        <% else %>
+        <form action='/teams/post/<%= @post.id%>/like' method='post'>
+        <button class="btn btn-default"> <img src="/assets/img/like.png" alt="" class="post-like-img">좋아요</button>
+        </form>
+
+        <% end %>
+      </p>
+    </div>
+
+
     <div class="card-footer text-muted">
       <% if (@post.attachment.blank?) %>
 

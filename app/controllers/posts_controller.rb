@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  skip_before_action :verify_authenticity_token
   before_action :set_post, only: [:show, :edit, :update, :destroy]
   before_action :set_teamid
   # user 로그인 여부 체크
@@ -74,7 +75,16 @@ class PostsController < ApplicationController
       end
     end
   end
-
+  #좋아요 관련 액션
+  def like_toggle
+    like = Like.find_by(user_id: current_user.id, post_id: params[:post_id])
+    if like.nil?
+      Like.create(user_id: current_user.id, post_id: params[:post_id])
+    else
+      like.destroy
+    end
+  redirect_back(fallback_location: root_path)
+  end
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_post
