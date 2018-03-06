@@ -27,7 +27,7 @@ user=[
 ["류효광",3,"전자전기공학과","ryu@likelion.org","testtest","testtest"],
 ]
 user.each do |name,team_id,major,email,password,password_confirmation|
-  User.create!(name: name,team_id: team_id, major: major, email: email,password: password,password_confirmation: password_confirmation)
+  User.create!(name: name,team_id: team_id, major: major, email: email,password: password,password_confirmation: password_confirmation).add_role(:admin)
 end
 
 post=[

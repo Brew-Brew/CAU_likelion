@@ -17,7 +17,7 @@ class User < ApplicationRecord
   end
   #유저 기본권한 설정 관련 메소드
   def assign_default_role
-    self.add_role(:admin) if self.roles.blank?
+    self.add_role(:newUser) if self.roles.blank?
   end
  #구글 인증 관련 메소드
   def self.from_omniauth(access_token)
