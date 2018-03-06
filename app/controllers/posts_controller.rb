@@ -21,7 +21,8 @@ class PostsController < ApplicationController
 
   # GET /posts/new
   def new
-    if params[:teamid] != current_user.team_id
+    #team 넘버를 check해서, 글을 작성할수 있는지 판단한다.
+    if (params[:teamid]).to_i != current_user.team_id
       flash[:alert] = "#{params[:teamid]}팀만 이 스터디방에 글을 작성할 수있습니다!"
       redirect_back(fallback_location: root_path)
     end
