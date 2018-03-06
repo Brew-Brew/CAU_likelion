@@ -1,11 +1,10 @@
 
 
-<body class="container login">
+<section class="login">
   <div class="login-bg">
-    <div class="login-wrapper">
       
         <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-          <div class="login-form-inputs">
+          <div class="container align-self-center">
             <label class="label" for="user_email">
               EMAIL 
             </label>
@@ -21,6 +20,5 @@
           </div>
         <% end %>
         <%= render "devise/shared/links" %>
-    </div>
   </div>
-</body>
+</section>
