@@ -183,27 +183,32 @@ small, .small {
   font-size: 80%;
 }
 
-.login-wrapper {
+.login-bg {
+  
   font-weight: 800;
-  padding-top: 15rem;
   text-align: center;
+  padding-top: 10rem;
   background-color: transparent;
   width: 50rem;
   height: 50rem;
-  position:absolute;
+  position: absolute;
   top:50%;
   left:50%;
   transform:translate(-50%, -50%)
 
 }
+// .label {
+//   text-align: left !important;
+// }
 
-body.login{
+section.login{
   background: url('/assets/img/team-bg.jpg')
   no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  width: 100%
 }
 
 input {
