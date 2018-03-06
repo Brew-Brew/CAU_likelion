@@ -29,3 +29,27 @@ user=[
 user.each do |name,team_id,major,email,password,password_confirmation|
   User.create!(name: name,team_id: team_id, major: major, email: email,password: password,password_confirmation: password_confirmation)
 end
+
+post=[
+["test","test_content",1,1],
+["test","test_content",1,1],
+["test","test_content",1,1],
+["test","test_content",1,1],
+["test","test_content",1,2],
+["test","test_content",1,2],
+["test","test_content",2,3],
+["test","test_content",2,3],
+["test","test_content",2,3],
+["test","test_content",2,3],
+["test","test_content",2,4],
+["test","test_content",2,4],
+["test","test_content",3,5],
+["test","test_content",3,5],
+["test","test_content",3,5],
+["test","test_content",3,5],
+["test","test_content",3,6],
+["test","test_content",3,6]
+]
+post.each do |title,content,team_id,user_id|
+  Post.create!(title: title,content: content, team_id: team_id, user_id: user_id)
+end
