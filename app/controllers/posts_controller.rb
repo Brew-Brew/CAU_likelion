@@ -21,6 +21,10 @@ class PostsController < ApplicationController
 
   # GET /posts/new
   def new
+    if params[:teamid] != current_user.team_id
+      flash[:alert] = "#{params[:teamid]}팀만 이 스터디방에 글을 작성할 수있습니다!"
+      redirect_back(fallback_location: root_path)
+    end
     @post = Post.new
   end
 
