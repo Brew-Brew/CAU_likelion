@@ -54,6 +54,9 @@
 </table>
 
 <br>
+<div class="post-paginate">
+  <%= will_paginate(@posts, :renderer => WillPaginate::ActionView::Bootstrap4LinkRenderer) %>
+</div>
 
 <%= link_to 'New Post', new_post_path, class: "btn btn-outline-warning" %>
 </div>

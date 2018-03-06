@@ -11,7 +11,7 @@ class PostsController < ApplicationController
   # GET /posts.json
   def index
     @posts = Post.where("team_id = ?", params[:teamid])
-
+    @posts = @posts.order('created_at DESC').paginate(:page => params[:page])
   end
 
   # GET /posts/1
