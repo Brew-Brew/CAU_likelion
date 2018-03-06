@@ -6,7 +6,6 @@
   </div>
 </section>
 
-
 <div class="app-template">
   <blockquote class="team-blq">
              <h3>2018 중앙대학교 멋쟁이 사자처럼 팀원소개  - <strong>TEAM<%=@teamid%></strong></h3>
@@ -15,6 +14,7 @@
   <div class="team-studyButton">
     <%= link_to '스터디룸으로 이동하기', posts_path(@teamid), class: "btn btn-outline-warning" %>
   </div>
+
 
   <!-- <table class="team-table">
     <thead class="team-bg-light-yellow">
@@ -43,22 +43,44 @@
     </tbody> -->
 
   <div class="container text-center py-5">
-    <div class="row align-items-center">
-      <% @admins.each do |user| %>
-         <div class="col-md-3 my-3">
-            <div class="home-card">
-              <img class="home-card-img-top" src="/assets/img/download.png" alt="Card image cap">
-              <div class="card-footer">
-                <h5 class="memo"><%=user.name%></h5>
-                <p class="home-card-subtitle mb-2 text-muted"><%=user.roles.last.name%></p>
+    <h1 style="font-family: 'Quicksand', sans-serif; style=color: #A2B9DB;"><strong>TEAM<%=@teamid%></strong></h1>
+    <hr><br>
+    <h4 style="font-family: 'Quicksand', sans-serif; style=color: #629ef6;"><strong>TUTORS</strong></h4>
+    <div class="row" style="display: flex; justify-content: center;">
+      <div class="align-items-center col-md-4 my-4">
+          <div class="card-group">
+            <% @admins.each do |user| %>
+              <div class="card text-center">
+                <img class="card-img-top" src="/assets/mkicon.jpg" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title"><%=user.name%></h5>
+                    <p class="card-text"><small class="text-muted"><%=user.roles.last.name%></small></p>
+                    <div class="overlay text-center"><%=user.roles.last.name%></div>
+                  </div>
               </div>
-            </div>
-         </div>
-     <% end %>
+            <% end %>
+          </div>
+      </div>
+    </div>
+    <br /> <br />
+    <h4 style="font-family: 'Quicksand', sans-serif; style=color: #629ef6;"><strong>STUDENTS</strong></h4>
+  <div style="display: flex; justify-content: center;">
+    <div class="align-items-center col-md-2 my-2">
+      <% @students.each do |user| %>
+        <div class="card-group">
+          <div class="card">
+              <div class="card-body">
+                <h5 class="card-title"><%=user.name%></h5>
+                <p class="card-text"><small class="text-muted"><%=user.roles.last.name%></small></p>
+                <div class="overlay text-center"><%=user.roles.last.name%></div>
+              </div>
+          </div>
+        </div>
+      <% end %>
     </div>
   </div>
-
-    <div class="container text-center py-5">
+</div>
+    <!-- <div class="container text-center py-5">
       <div class="row align-items-center">
         <% @students.each do |user| %>
            <div class="col-md-2 my-2">
@@ -72,7 +94,4 @@
            </div>
        <% end %>
       </div>
-    </div>
-
-
-</div>
+  </div> -->
