@@ -2,23 +2,44 @@
 
 <section class="login">
   <div class="login-bg">
-      
-        <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-          <div class="container align-self-center">
-            <label class="label" for="user_email">
-              EMAIL 
-            </label>
-            <%= f.input :email, class: "form-control",placeholder:"ex) caulion@likelion.org",required: false, autofocus: true,label: false %>
-            <label for="user_password" class="label">
-              비밀번호
-            </label>
-            <%= f.input :password, placeholder:"",required: false,label: false %>
-            <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
-          </div>
-          <div class="form-actions">
-            <%= f.button :submit, "로그인" %>
-          </div>
-        <% end %>
-        <%= render "devise/shared/links" %>
+
+        <div class="container">
+          <div class="card logincard" style="background-color: rgba(255, 255, 255, 0.79);">
+            <div class="card-content">
+                <div class="row">
+                  <div class="col s12 m12 l4">
+                    <br />
+                    <blockquote style="border-color: rgba(255, 255, 255, 0);">
+                      <h3>2018</h3>
+                      <h3><strong>중앙대학교</strong></h3>
+                      <h3>멋쟁이 사자처럼</h3>
+                      <h3>로그인</h3>
+                    </blockquote>
+                  <hr />
+                  <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+                  <div class="col s12 m12 l8">
+                    <br>
+                        <div class="container align-self-center">
+                        <label class="label" for="user_email" style="color: black;">
+                          Email
+                        </label>
+                        <%= f.input :email, class: "form-control",placeholder:"ex) caulion@likelion.org",required: false, autofocus: true,label: false %>
+                        <label for="user_password" class="label" style="color: black;">
+                          password
+                        </label>
+                        <%= f.input :password, placeholder:"",required: false,label: false %>
+                        <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+                      </div>
+                      <div class="form-actions">
+                        <%= f.button :submit, "로그인" %>
+                      </div>
+                    <% end %>
+                    <%= render "devise/shared/links" %>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <br><br>
+        </div>
   </div>
 </section>
