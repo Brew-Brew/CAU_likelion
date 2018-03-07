@@ -32,7 +32,10 @@
    height:100%;
  }
  //기존 pre는 bootstrap이 적용되어 임의의 style이 적용되는데, 그것을 방지하기위한 스타일링이다.
- pre {border: 0; background-color: transparent;}
+ pre {
+   border: 0;
+   background-color: transparent;
+ padding: 20rem 0;}
 
  section {
    height:calc(90% - 50px);
