@@ -29,6 +29,7 @@ Rails.application.routes.draw do
 
   # user 관련 route
   get 'users/:id' => 'user#index'
+  post 'users/profileImage'=> 'user#create'
 
   # 팀관련 route
   get 'teams/:teamid' => 'team#index'

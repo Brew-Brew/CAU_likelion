@@ -16,7 +16,16 @@ $color : #ffc107;
    margin-top: 3rem;
    margin-bottom: 1rem;
  }
-
+&-profile{
+  text-align: center;
+  &-form{
+    display: inline-block;
+  }
+  &-image{
+    width: 18rem;
+    height: 20rem;
+  }
+}
   &-section{
     span{
        color: $color;

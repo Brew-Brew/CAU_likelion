@@ -11,6 +11,7 @@ class User < ApplicationRecord
 
   after_create :assign_default_role
 
+  mount_uploader :image, ImageUploader
  #좋아요 관련 메소드
   def is_like? (post)
   Like.find_by(user_id: self.id, post_id: post.id).present?
