@@ -7,13 +7,15 @@ $extra : calc(#{$pad} * 1.2);
 $color : #ffc107;
 
 
-
 .user{
   &-info {
     padding-top: 1.5rem !important;
     padding-bottom: 1.5rem !important;
   }
-
+ &-login-submit{
+   margin-top: 3rem;
+   margin-bottom: 1rem;
+ }
   &-section{
     span{
        color: $color;
