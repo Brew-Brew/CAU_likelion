@@ -1,4 +1,7 @@
 class TeamController < ApplicationController
+
+  before_action :check_user_in_cau, only: [:secret]
+
   def index
     @teamid=params[:teamid]
     @users = User.where("team_id = ?", params[:teamid])
@@ -19,15 +22,7 @@ class TeamController < ApplicationController
     redirect_back(fallback_location: root_path)
   end
   def secret
-    #secret 관련 유저 체크
-    if user_signed_in?
-      @user = User.find(current_user.id)
-      if @user.roles.last.name != "admin"
-          redirect_back(fallback_location: root_path)
-      end
-    else
-      redirect_back(fallback_location: root_path)
-    end
+
   end
   def only_cau
 
@@ -39,4 +34,16 @@ class TeamController < ApplicationController
     current_user.save
     redirect_back(fallback_location: root_path)
   end
+end
+
+#cau 팀학생인지 check 한다.팀번호가 없으면 cau학생만 이용가능하다는 페이지로 이동한다.
+def check_user_in_cau
+  if user_signed_in?
+    @user_team=current_user.team_id
+    if([1,2,3].include? @user_team)
+    else
+        redirect_back(fallback_location: root_path)
+    end
+  end
+
 end

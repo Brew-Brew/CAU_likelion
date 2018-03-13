@@ -101,7 +101,7 @@ class PostsController < ApplicationController
     #cau 팀학생인지 check 한다.팀번호가 없으면 cau학생만 이용가능하다는 페이지로 이동한다.
     def check_user_in_cau
       if user_signed_in?
-        @user_team=current_user.id
+        @user_team=current_user.team_id
         if([1,2,3].include? @user_team)
         else
           redirect_to '/onlycau'

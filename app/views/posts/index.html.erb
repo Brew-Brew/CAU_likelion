@@ -17,11 +17,12 @@
 <table class="table table-hover">
   <thead>
     <tr >
-      <th scope="cols" colspan=10% >Num</th>
+
       <th scope="cols" colspan=40% >제목</th>
       <th scope="cols" colspan=10%>작성자</th>
       <th scope="cols" colspan=10%><img src="/assets/img/like.png" alt="" class="post-like-img">Likes</th>
       <th class="post-header" scope="cols" colspan=30%>관리</th>
+        <th scope="cols" colspan=10% >작성날짜</th>
     </tr>
   </thead>
 
@@ -32,7 +33,7 @@
     <tr>
     <% @posts.each do |post| %>
 
-        <td colspan=10% scope="row">1</th>
+
         <td colspan=40% ><%=post.title%></td>
         <td colspan=10%>
             <% @user = User.where(:id => post.user_id).first%>
@@ -43,9 +44,12 @@
         </td>
         <td colspan=30% class="post-header">
         <%= link_to 'Show', post_path(@teamid,post), class: "btn btn-outline-warning"%>
-        <%= link_to 'Edit', edit_post_path(@teamid,post), class: "btn btn-outline-warning" %>
-        <%= link_to 'Destroy', destroy_path(@teamid,post), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-outline-warning" %>
+        <% if post.user_id == current_user.id %>
+          <%= link_to 'Edit', edit_post_path(@teamid,post), class: "btn btn-outline-warning" %>
+          <%= link_to 'Destroy', destroy_path(@teamid,post), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-outline-warning" %>
+        <% end %>
       </td>
+      <td colspan=10% scope="row"><%=post.created_at%></th>
     </tr>
 
     <% end %>

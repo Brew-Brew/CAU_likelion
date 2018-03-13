@@ -25,6 +25,10 @@ end
   def complete
   end
 
+  def notyet
+
+  end
+  
   def admincontact
     @contact = Contact.all
   end

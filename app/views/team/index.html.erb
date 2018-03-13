@@ -16,32 +16,6 @@
   </div>
 
 
-  <!-- <table class="team-table">
-    <thead class="team-bg-light-yellow">
-      <tr>
-        <th colspan="6"><a><i class="xi-emoticon-devil xi-1x"></i>Team <%=@teamid%> 구성원들!<i class="xi-emoticon-devil xi-1x"></i></a></th>
-      </tr>
-    </thead>
-
-    <thead>
-      <th colspan="3" class="team-table-header">멘토</th>
-    </thead>
-
-    <tbody>
-      <% @admins.each do |user| %>
-        <tr>
-          <td><%=user.name%>: <%=user.roles.last.name%></td>
-        </tr>
-      <% end %>
-      <th colspan="3" class="team-table-header">팀원</th>
-      <% @students.each do |user| %>
-        <tr>
-          <td><%=user.name%>: <%=user.roles.last.name%></td>
-        </tr>
-      <% end %>
-
-    </tbody> -->
-
   <div class="container text-center py-5">
     <h1 style="font-family: 'Quicksand', sans-serif; style=color: #A2B9DB;"><strong>TEAM<%=@teamid%></strong></h1>
     <hr><br>
@@ -51,7 +25,12 @@
           <div class="card-group">
             <% @admins.each do |user| %>
               <div class="card text-center">
-                <img class="card-img-top" src="/assets/mkicon.jpg" alt="Card image cap">
+                <% if user.image.url.nil? %>
+                <img src="/assets/img/download.png" class="card-img-top user-profile-image" alt="profile">
+                <% else %>
+                <img src="<%=user.image.url%>" class="card-img-top user-profile-image" alt="profile">
+                <% end %>
+                <!-- <img class="card-img-top" src="/assets/mkicon.jpg" alt="Card image cap"> -->
                   <div class="card-body">
                     <h5 class="card-title"><%=user.name%></h5>
                     <p class="card-text"><small class="text-muted"><%=user.roles.last.name%></small></p>
@@ -65,10 +44,15 @@
     <br /> <br />
     <h4 style="font-family: 'Quicksand', sans-serif; style=color: #629ef6;"><strong>STUDENTS</strong></h4>
   <div style="display: flex; justify-content: center;">
-    <div class="align-items-center col-md-2 my-2">
-      <% @students.each do |user| %>
+    <div class="align-items-center col-md-3 my-2">
         <div class="card-group">
+          <% @students.each do |user| %>
           <div class="card">
+            <% if user.image.url.nil? %>
+            <img src="/assets/img/download.png" class="card-img-top user-profile-image" alt="profile">
+            <% else %>
+            <img src="<%=user.image.url%>" class="card-img-top user-profile-image" alt="profile">
+            <% end %>
               <div class="card-body">
                 <h5 class="card-title"><%=user.name%></h5>
                 <p class="card-text"><small class="text-muted"><%=user.roles.last.name%></small></p>
@@ -80,18 +64,3 @@
     </div>
   </div>
 </div>
-    <!-- <div class="container text-center py-5">
-      <div class="row align-items-center">
-        <% @students.each do |user| %>
-           <div class="col-md-2 my-2">
-              <div class="home-card">
-                <img class="home-card-img-top" src="/assets/img/download.png" alt="Card image cap">
-                <div class="card-footer">
-                  <h5 class="memo"><%=user.name%></h5>
-                  <p class="home-card-subtitle mb-2 text-muted"><%=user.roles.last.name%></p>
-                </div>
-              </div>
-           </div>
-       <% end %>
-      </div>
-  </div> -->

@@ -23,9 +23,9 @@
   <body>
 
     <!-- 우리 nav bar -->
-    <nav class="navbar fixed-top navbar-expand-lg navbar-light transparent-nav nav-custom" data-spy="affix">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light transparent-nav nav-custom " data-spy="affix" >
 
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" style="display: none;">
         MENU
       </button>
 
@@ -34,7 +34,7 @@
       </h1>
 
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav nav-custom">
+        <ul class="navbar-nav nav-custom" >
           <li class="nav-item active">
             <a class="nav-link px-lg-3 nav-custom" href="/"> HOME <span class="sr-only">(현재 페이지)</span></a>
           </li>
@@ -62,7 +62,6 @@
           <a class="app-user col-6" href="/users/sign_out">로그아웃</a>
         <% else %>
           <a class="app-user col-6" href="/users/sign_in">로그인</a>
-          <a class="app-user col-6" href="/users/sign_up">회원가입</a>
         <% end %>
       </div>
     </nav>
@@ -83,7 +82,7 @@
 
 
 
-  
+
 <!-- footer -->
   <footer class ="footer">
       <div class="footer-container">

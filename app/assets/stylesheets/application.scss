@@ -27,7 +27,12 @@
    font-size: 15px; /* 1rem === 15px */
    line-height: 1.6; /* 보통 배율값을 적어준다. 24px/15px = 1.6 */
  }
-
+ @media (min-width: 576px) {
+   html {
+     font-size: 20px; /* 1rem === 15px */
+     line-height: 1.8; /* 보통 배율값을 적어준다. 24px/15px = 1.6 */
+   }
+ }
  html,body {
    height:100%;
  }
@@ -41,6 +46,13 @@
    height:calc(90% - 50px);
    height: 50vh;
 
+ }
+ @media (min-width: 576px) {
+   section {
+     height:calc(90% - 50px);
+     height: 30vh;
+
+   }
  }
 
  .footer {
@@ -78,6 +90,7 @@
    }
    &-user{
      color:white;
+     margin: auto;
    }
    &-brand {
      margin: 0;
@@ -90,6 +103,13 @@
      }
    }
 
+ }
+
+ .nav-custom{
+   float:none;
+   margin:0 auto;
+  display: block;
+  text-align: center;
  }
  .google-login{
   text-indent:-10000px;
