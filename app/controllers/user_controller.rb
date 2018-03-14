@@ -1,5 +1,6 @@
 class UserController < ApplicationController
-protect_from_forgery with: :exception, prepend: true
+protect_from_forgery
+skip_before_action :verify_authenticity_token
   def index
   @user = User.find(params[:id])
   end
