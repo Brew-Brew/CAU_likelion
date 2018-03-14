@@ -1,12 +1,24 @@
 # frozen_string_literal: true
 
 class User::RegistrationsController < Devise::RegistrationsController
+  protect_from_forgery
   # before_action :configure_sign_up_params, only: [:create]
   # before_action :configure_account_update_params, only: [:update]
 
   # GET /resource/sign_up
   # def new
+  #   if user_signed_in?
+  #     @user = User.find(current_user.id)
+  #     if @user.roles.last.name != "admin"
+  #         redirect_to '/'
+  #         puts "aaaa"
+  #     end
+  #   else
+  #     puts "@user"
+  #     redirect_to '/'
+  #   end
   #   super
+  #
   # end
 
   # POST /resource
