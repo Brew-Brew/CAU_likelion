@@ -26,9 +26,9 @@
             <% @admins.each do |user| %>
               <div class="card text-center">
                 <% if user.image.url.nil? %>
-                <img src="/assets/img/download.png" class="card-img-top user-profile-image" alt="profile">
+                <%= image_tag "download.png", :class =>"card-img-top user-profile-image"  %>
                 <% else %>
-                <img src="<%=user.image.url%>" class="card-img-top user-profile-image" alt="profile">
+                <%= image_tag "#{user.image.url}", :class =>"card-img-top user-profile-image"  %>
                 <% end %>
                 <!-- <img class="card-img-top" src="/assets/mkicon.jpg" alt="Card image cap"> -->
                   <div class="card-body">
