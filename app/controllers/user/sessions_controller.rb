@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 class User::SessionsController < Devise::SessionsController
+  protect_from_forgery
   # protect_from_forgery
   # before_action :configure_sign_in_params, only: [:create]
   #
