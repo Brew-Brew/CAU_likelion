@@ -34,7 +34,7 @@
     height:100vh;
     min-height:400px;
     /* linear-gradient(방향, 시작점, 끝점)*/
-    background-image: url('/assets/lionbg_22.jpg');
+    background-image: url(image_path('lionbg_22.jpg'));
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
