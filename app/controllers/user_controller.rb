@@ -1,4 +1,5 @@
 class UserController < ApplicationController
+protect_from_forgery
   def index
   @user = User.find(params[:id])
   end
