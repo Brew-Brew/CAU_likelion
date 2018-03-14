@@ -14,7 +14,7 @@
   <div class="user-container">
     <div class="user-profile">
       <% if @user.image.url.nil? %>
-      <img src="/assets/img/download.png" class="user-profile-image" alt="profile">
+      <%= image_tag "download.png", :class =>"user-profile-image"  %>
       <p>프로필이 없습니다. 프로필을 등록해주세요</p>
       <%= form_tag '/users/profileImage', method: :post, class: 'user-profile-form',multipart: true do %>
         <input type="file" name="image" value="imgae">
@@ -22,7 +22,7 @@
         <input type="submit">
       <% end %>
       <% else %>
-      <img src="<%=@user.image.url%>" class="user-profile-image" alt="profile">
+      <%= image_tag "#{@user.image.url}", :class =>"user-profile-image"  %>
       <% end %>
     </div>
 

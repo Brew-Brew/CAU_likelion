@@ -49,9 +49,9 @@
           <% @students.each do |user| %>
           <div class="card">
             <% if user.image.url.nil? %>
-            <img src="/assets/img/download.png" class="card-img-top user-profile-image" alt="profile">
+              <%= image_tag "download.png", :class =>"card-img-top user-profile-image"  %>
             <% else %>
-            <img src="<%=user.image.url%>" class="card-img-top user-profile-image" alt="profile">
+              <%= image_tag "#{user.image.url}", :class =>"card-img-top user-profile-image"  %>
             <% end %>
               <div class="card-body">
                 <h5 class="card-title"><%=user.name%></h5>
