@@ -142,7 +142,7 @@
     height:100vh;
     min-height:400px;
     /* linear-gradient(방향, 시작점, 끝점)*/
-    background-image: url('/assets/bg-contact.jpg');
+    background-image: url(image_path('bg-contact.jpg'));
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
