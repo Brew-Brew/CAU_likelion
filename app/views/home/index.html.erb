@@ -76,7 +76,7 @@
                 <div class="row">
                     <div class="col-12 col-sm-5">
                       <a href="#" data-toggle="modal" data-target="#myModal1">
-                        <img class="prodimg mx-auto d-block img-fluid rounded-circle" src="/assets/AMT.png" alt="First slide">
+                        <%= image_tag "AMT.png", :class =>"prodimg mx-auto d-block img-fluid rounded-circle"  %>
                       </a>
                     </div>
                     <div class="col-12 col-sm-7">
@@ -95,7 +95,7 @@
                     <div class="row">
                         <div class="col-12 col-sm-5">
                           <a href="#" data-toggle="modal" data-target="#myModal1">
-                            <img class="prodimg mx-auto d-block img-fluid rounded-circle" src="/assets/KoB.png" alt="First slide">
+                            <%= image_tag "KoB.png", :class =>"prodimg mx-auto d-block img-fluid rounded-circle"  %>
                           </a>
                         </div>
                         <div class="col-12 col-sm-7">
@@ -114,7 +114,7 @@
                         <div class="row">
                             <div class="col-12 col-sm-5">
                               <a href="#" data-toggle="modal" data-target="#myModal1">
-                                <img class="prodimg mx-auto d-block img-fluid rounded-circle" src="/assets/SmS.png" alt="First slide">
+                                <%= image_tag "SmS.png", :class =>"prodimg mx-auto d-block img-fluid rounded-circle"  %>
                               </a>
                             </div>
                             <div class="col-12 col-sm-7">
@@ -133,7 +133,7 @@
                             <div class="row">
                                 <div class="col-12 col-sm-5">
                                   <a href="#" data-toggle="modal" data-target="#myModal1">
-                                    <img class="prodimg mx-auto d-block img-fluid rounded-circle" src="/assets/NEXT.png" alt="First slide">
+                                      <%= image_tag "NEXT.png", :class =>"prodimg mx-auto d-block img-fluid rounded-circle"  %>
                                   </a>
                                 </div>
                                 <div class="col-12 col-sm-7">
@@ -148,57 +148,6 @@
                     </section>
       </section>
 
-<!--
-    <section id="events">
-    	<div class="container py-5">
-    		<h1>CAU-LION WORKS</h1>
-    		<hr>
-
-    		<div class="card-deck-wrapper">
-    			<div class="card-deck">
-    				<div class="card my-4" style="width: 100%;">
-    					<img class="card-img-top" src="" width="100%" style="background-size:cover; " alt="Card image cap">
-    					<div class="card-body">
-    						<h4 class="card-title">스마트폰 스쿨</h4>
-    						<h6 class="card-subtitle mb-2 text-muted">블라블라블라</h6>
-    						<p class="card-text">오지고 지리고 레릿고</p>
-    					</div>
-    				</div>
-
-    				<div class="card my-4" style="width: 100%;">
-    					<img class="card-img-top" src="./assets/naver.jpeg" width="100%" style="background-size:cover; " alt="Card image cap">
-    					<div class="card-body">
-    						<h4 class="card-title">아마추어 스튜디오</h4>
-    						<h6 class="card-subtitle mb-2 text-muted">블라블라블라</h6>
-    						<p class="card-text">오지고 지리고 레릿고</p>
-    					</div>
-    				</div>
-    			</div>
-    		</div>
-
-    		<div class="card-deck-wrapper">
-    			<div class="card-deck">
-    				<div class="card my-4" style="width: 100%;">
-    					<img class="card-img-top" src="./assets/hackathon.jpeg" width="100%" style="background-size:cover;" alt="Card image cap">
-    				  <div class="card-body">
-    				    <h4 class="card-title">한국철봉</h4>
-    				    <h6 class="card-subtitle mb-2 text-muted">블라블라블라</h6>
-    				    <p class="card-text">나시티의 참치형 어디감?</p>
-    					</div>
-    				</div>
-    				<div class="card my-4" style="width: 100%;">
-    					<img class="card-img-top" src="./assets/ideathon.jpeg" width="100%" alt="Card image cap">
-    				  <div class="card-body">
-    				    <h4 class="card-title">what's next?</h4>
-    				    <h6 class="card-subtitle mb-2 text-muted">만들어보아요</h6>
-    				    <p class="card-text">캬캬캬캬컄캬캬</p>
-    					</div>
-    				</div>
-    			</div>
-    		</div>
-    	</div>
-    </section> -->
-
 <section id="managers">
    <div class="container text-center py-5">
       <h1 style="font-family: 'Quicksand', sans-serif; style=color: #A2B9DB;">CAU-LION MANAGERS</h1>
@@ -206,7 +155,7 @@
         <br>
         <div class="card-group">
           <div class="card text-center">
-            <img class="card-img-top" src="/assets/mkicon.jpg" alt="Card image cap">
+              <%= image_tag "mkicon.jpg", :class =>"card-img-top"  %>
               <div class="card-body">
                 <h5 class="card-title">강민경</h5>
                 <p class="card-text"><small class="text-muted">응용통계학과</small></p>
@@ -214,7 +163,7 @@
               </div>
           </div>
           <div class="card text-center">
-            <img class="card-img-top" src="/assets/hkicon.jpg" alt="Card image cap">
+          <%= image_tag "hkicon.jpg", :class =>"card-img-top"  %>
             <div class="card-body">
               <h5 class="card-title">류효광</h5>
               <p class="card-text"><small class="text-muted">전자전기공학과</small></p>
@@ -222,7 +171,7 @@
             </div>
           </div>
           <div class="card text-center">
-            <img class="card-img-top" src="/assets/jwicon.jpg" alt="Card image cap">
+            <%= image_tag "jwicon.jpg", :class =>"card-img-top"  %>
             <div class="card-body">
               <h5 class="card-title">송정우</h5>
               <p class="card-text"><small class="text-muted">컴퓨터공학과</small></p>
@@ -230,7 +179,7 @@
             </div>
           </div>
           <div class="card text-center">
-            <img class="card-img-top" src="/assets/jsicon.jpg" alt="Card image cap">
+            <%= image_tag "jsicon.jpg", :class =>"card-img-top"  %>
             <div class="card-body">
               <h5 class="card-title">심지선</h5>
               <p class="card-text"><small class="text-muted">경영학과</small></p>
@@ -238,7 +187,7 @@
             </div>
           </div>
           <div class="card text-center">
-            <img class="card-img-top" src="/assets/skicon.jpg" alt="Card image cap">
+          <%= image_tag "skicon.jpg", :class =>"card-img-top"  %>
             <div class="card-body">
               <h5 class="card-title center">이승규</h5>
               <p class="card-text"><small class="text-muted">컴퓨터공학과</small></p>
@@ -247,7 +196,7 @@
             </div>
           </div>
           <div class="card text-center">
-            <img class="card-img-top" src="/assets/dwicon.jpg" alt="Card image cap">
+            <%= image_tag "dwicon.jpg", :class =>"card-img-top"  %>
             <div class="card-body">
               <h5 class="card-title center">홍동우</h5>
               <p class="card-text"><small class="text-muted">전자전기공학과</small></p>
@@ -257,91 +206,6 @@
         </div>
       </div>
 
-      <!-- <div class="row align-items-center">
-         <div class="col-md-4 my-4">
-            <div class="home-card" id="민경">
-              <img class="home-card-img-top" src="/assets/img/download.png" alt="Card image cap">
-              <div class="home-card-body">
-                <span style="float: none;" class="badge badge-pill badge-warning">회장님</span>
-                <h5 class="home-card-title">강민경</h5>
-                <p class="home-card-text">응용통계학과 18</p>
-                <div class="home-card-slogan">
-                  <p>"다비치가 부릅니다.8282"</p>
-                </div>
-              </div>
-            </div>
-
-         </div>
-         <div class="col-md-4 my-4">
-            <div class="home-card">
-              <img class="home-card-img-top" src="/assets/img/download.png" alt="Card image cap">
-              <div class="home-card-body">
-                <h5 class="home-card-title">류효광</h5>
-                <p class="home-card-text">전자전기공학부 15</p>
-                <div class="home-card-slogan">
-                  <p>"결혼조하"</p>
-                </div>
-              </div>
-            </div>
-
-         </div>
-         <div class="col-md-4 my-4">
-           <div class="home-card">
-             <img class="home-card-img-top" src="/assets/img/download.png" alt="Card image cap">
-             <div class="home-card-body">
-               <h5 class="home-card-title">송정우</h5>
-               <p class="home-card-text">컴퓨터공학과 17</p>
-               <div class="home-card-slogan">
-                 <p>"중 앙기모띠"</p>
-               </div>
-              </div>
-           </div>
-
-         </div>
-       </div>
-    <div class="row align-items-center">
-         <div class="col-md-4 my-4">
-           <div class="home-card">
-             <img class="home-card-img-top" src="/assets/img/download.png" alt="Card image cap">
-             <div class="home-card-body">
-               <h5 class="home-card-title">심지선</h5>
-               <p class="home-card-text">경영학과 17</p>
-               <div class="home-card-slogan">
-                 <p>"이 편지는 19세기 영국에서부터 시작되어..."</p>
-               </div>
-             </div>
-           </div>
-
-         </div>
-         <div class="col-md-4 my-4">
-           <div class="home-card">
-             <img class="home-card-img-top" src="/assets/img/download.png" alt="Card image cap">
-             <div class="home-card-body">
-               <h5 class="home-card-title">이승규</h5>
-               <p class="home-card-text">컴퓨터공학과 15</p>
-               <div class="home-card-slogan">
-                 <p>"이시대 최고의 위트가이(라고 혼자 주장)"</p>
-               </div>
-             </div>
-           </div>
-
-         </div>
-         <div class="col-md-4 my-4">
-           <div class="home-card">
-             <img class="home-card-img-top" src="/assets/img/download.png" alt="Card image cap">
-             <div class="home-card-body">
-               <h5 class="home-card-title">홍동우</h5>
-               <p class="home-card-text department">전자전기공학부 17</p>
-               <div class="home-card-slogan">
-                 <p>"아영아 난 너밖에 없다."</p>
-               </div>
-             </div>
-           </div>
-
-         </div>
-       </div>
-
-   </div> -->
 </section>
 
 <section id="aboutlikelion" class="d-flex align-items-center" style="background-color: #FFFF;">
@@ -359,18 +223,7 @@
     </div>
 	</div>
 </section>
-<!--
-<div class="row">
-  <div class="col-md-6 offset-md-3 my-4">
-     <div class="home-card" >
-       <div class="card-body member-card">
-         <h4 class="card-title">Who's Next?</h4>
-         <h6 class="home-card-subtitle mb-2 text-muted">중앙대학교 LIKELION</h6>
-         <p class="memo">"많이 지원해 주세요!"</p>
-       </div>
-     </div>
-  </div>
-</div> -->
+
 
 <section id="contact" style="background-color: #FFFF;">
 	<div class="container">
