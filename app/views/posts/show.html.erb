@@ -26,7 +26,7 @@
 
         <% else %>
         <form action='/teams/post/<%= @post.id%>/like' method='post'>
-        <button class="btn btn-default"> <img src="/assets/img/like.png" alt="" class="post-like-img">좋아요</button>
+        <button class="btn btn-default">   <%= image_tag "like.png", :class =>"post-like-img"%>좋아요</button>
         </form>
 
         <% end %>
