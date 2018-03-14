@@ -1,5 +1,5 @@
 class UserController < ApplicationController
-protect_from_forgery
+protect_from_forgery with: :exception, prepend: true
   def index
   @user = User.find(params[:id])
   end
