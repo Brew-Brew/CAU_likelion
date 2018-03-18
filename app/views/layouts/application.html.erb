@@ -10,30 +10,70 @@
     <!-- fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/kopubbatang.css">
-
+    <link href="https://fonts.googleapis.com/css?family=Gochi+Hand" rel="stylesheet">
     <%= stylesheet_link_tag  "application.css" %>
 
     <!-- bootstrap CSS-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
     <%= stylesheet_link_tag "custom.css" %>
-    <%= stylesheet_link_tag "home.css" %>
 
   </head>
 
   <body>
+<!--민굥  -->
+<nav class="navbar fixed-top navbar-expand-lg navbar-light transparent-nav nav-custom" data-spy="affix" >
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    M E N U
+    <span class="navbar-toggler-icon"></span>
+  </button>
+    <a class="navbar-brand" href="/">
+      <%= image_tag "WhiteBigLogo-iloveimg-resized.png", :class =>"likelion-logo pr-4 mr-4" %>
+    </a>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav mr-auto" >
+          <li class="nav-item active">
+            <a class="nav-link px-lg-3 nav-custom" href="/"> HOME <span class="sr-only">(현재 페이지)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-lg-3 nav-custom" href="/contact">CONTACT</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle nav-custom" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              TEAM
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="/teams/1">TEAM1</a>
+              <a class="dropdown-item" href="/teams/2">TEAM2</a>
+              <a class="dropdown-item" href="/teams/3">TEAM3</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="app-user">
+        <% if user_signed_in? %>
+          <span class="app-user col-6" ><%= current_user.name%></span>
+          <a class="app-user col-6" href="/users/<%= current_user.id %>">MyPage</a>
+          <a class="app-user col-6" href="/users/sign_out">로그아웃</a>
+        <% else %>
+          <a class="app-user col-6" href="/users/sign_in">로그인</a>
+        <% end %>
+      </div>
+  </nav>
+
+<!-- <nav class="navbar fixed-top navbar-expand-lg navbar-light transparent-nav nav-custom " data-spy="affix" > -->
 
     <!-- 우리 nav bar -->
-    <nav class="navbar fixed-top navbar-expand-lg navbar-light transparent-nav nav-custom " data-spy="affix" >
+      <!-- <nav class="navbar navbar-expand-sm navbar-light bg-trans transparent-nav nav-custom" data-spy="affix" > -->
+      <!-- <nav class="navbar fixed-top navbar-expand-lg navbar-light transparent-nav nav-custom " data-spy="affix" >
 
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" style="display: none;">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" style="display: none;">
         MENU
       </button>
-
-      <h1 class="app-brand">
-            <%= image_tag "WhiteBigLogo-iloveimg-resized.png", :class =>"likelion-logo pr-4 mr-4"  %>
-      </h1>
-
+        <a class="navbar-brand" href="/">
+          <%= image_tag "WhiteBigLogo-iloveimg-resized.png", :class =>"likelion-logo pr-4 mr-4" %>
+        </a>
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav nav-custom" >
           <li class="nav-item active">
@@ -65,7 +105,7 @@
           <a class="app-user col-6" href="/users/sign_in">로그인</a>
         <% end %>
       </div>
-    </nav>
+    </nav> -->
 
     <%= tinymce_assets %>
 

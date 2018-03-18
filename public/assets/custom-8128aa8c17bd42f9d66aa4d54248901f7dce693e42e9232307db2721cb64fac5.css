@@ -1,0 +1,36 @@
+@charset "UTF-8";
+/* line 3, /Users/minkyung/Desktop/CAU_likelion/app/assets/stylesheets/custom.scss */
+.navbar-toggler {
+  border: none;
+}
+
+/* line 7, /Users/minkyung/Desktop/CAU_likelion/app/assets/stylesheets/custom.scss */
+.navbar-light .navbar-nav .nav-link,
+.navbar-toggler {
+  font-size: 0.9333333rem;
+  font-weight: 700;
+  line-height: 1.43;
+  letter-spacing: 0.21em;
+  color: #ffc107;
+}
+
+/* line 16, /Users/minkyung/Desktop/CAU_likelion/app/assets/stylesheets/custom.scss */
+.navbar-light .nav-item.active .nav-link {
+  color: #ff5216;
+}
+
+/* Navbar 투명한 상태 + 스크롤하면 색 나타나게 하는 CSS - 작동된다 */
+/* line 20, /Users/minkyung/Desktop/CAU_likelion/app/assets/stylesheets/custom.scss */
+.transparent-nav {
+  background-color: transparent;
+}
+
+/* line 21, /Users/minkyung/Desktop/CAU_likelion/app/assets/stylesheets/custom.scss */
+.transparent-nav.visible {
+  background-color: #ffc107;
+}
+
+/* line 22, /Users/minkyung/Desktop/CAU_likelion/app/assets/stylesheets/custom.scss */
+.transparent-nav.visible .nav-item .nav-link {
+  color: white;
+}
