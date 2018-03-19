@@ -12,11 +12,17 @@
             };
         </pre> -->
 
-        <h4>
-        6기 합격을 축하합니당!!
-          <div id="fragment1">Hariharan</div>
-          <div id="fragment2"> Hari Harker</div>
+        <h4 class="firstpage">
+          멋쟁이 사자처럼 <span class="sixth">6기 합격</span> 을 축하합니다!!
         </h4>
+        <h4 style="text-align: center;">
+            <a href="" class="typewrite" data-period="2000" data-type='[ "재건", "명승", "유림", "혜린(김)", "혜린(남)", "승완", "시현", "종혁", "민승"
+            , "수진", "상무", "희성", "동규", "재준", "호설", "현희", "호영", "민정"]'>
+              <span class="wrap"></span>
+            </a>
+          </h4>
+
+
 
     </div>
   </section>
@@ -28,7 +34,7 @@
       <div class="container py-5">
         <div class="wrapper">
           <header class="about-header">
-            <h2 class="about-category" style="font-family: 'Gochi Hand', cursive; font-size: 45px; text-align: center; color: #00327c;">What We Do</h2>
+            <h2 class="about-category" style="font-family: 'OTEnjoystoriesBA'; font-size: 45px; text-align: center; color: #00327c;">What We Do</h2>
             <hr>
             <div class="card-body text-center">
               <%= image_tag "Change" %>
@@ -79,7 +85,7 @@
     </section>
 <div class="home-work">
 	<div class="container">
-	  <h2 style="font-family: 'Gochi Hand', cursive; font-size: 45px; text-align: center; color: #00327c;">CAU-LION WORKS</h2>
+	  <h2 style="font-family: 'OTEnjoystoriesBA'; font-size: 45px; text-align: center; color: #00327c;">CAU-LION WORKS</h2>
     <hr><br />
   </div>
     <section id="profile" class="profile">
@@ -161,7 +167,7 @@
 
 <section id="managers">
    <div class="container text-center py-5">
-      <h2 style="font-family: 'Gochi Hand', cursive; font-size: 45px; text-align: center; color: #00327c;">CAU-LION MANAGERS</h2>
+      <h2 style="font-family: 'OTEnjoystoriesBA'; font-size: 45px; text-align: center; color: #00327c;">CAU-LION MANAGERS</h2>
       <hr>
         <br>
         <div class="card-group">
@@ -221,7 +227,7 @@
 
 <section id="aboutlikelion" class="d-flex align-items-center" style="background-color: #FFFF;">
   <div class="container py-5">
-    <h1 class="text-center about-heading" style="color: #A2B9DB; font-family: 'Gochi Hand', cursive;">Who's NEXT?</h1>
+    <h1 class="text-center about-heading" style="color: #A2B9DB; font-family: 'OTEnjoystoriesBA';">Who's NEXT?</h1>
     <br>
 
 	</div>
@@ -230,7 +236,7 @@
 
 <section id="contact" style="background-color: #FFFF;">
 	<div class="container">
-		<h2 style="font-family: 'Gochi Hand', cursive; font-size: 45px; text-align: center; color: #00327c;">Contacts</h2>
+		<h2 style="font-family: 'OTEnjoystoriesBA'; font-size: 45px; text-align: center; color: #00327c;">Contacts</h2>
 		<hr>
 		<div class="row my-5">
 			<div class="col-md-6">
@@ -252,3 +258,62 @@
 		</div>
 	</div>
 </section>
+
+<script>
+var TxtType = function(el, toRotate, period) {
+      this.toRotate = toRotate;
+      this.el = el;
+      this.loopNum = 0;
+      this.period = parseInt(period, 10) || 2000;
+      this.txt = '';
+      this.tick();
+      this.isDeleting = false;
+  };
+
+  TxtType.prototype.tick = function() {
+      var i = this.loopNum % this.toRotate.length;
+      var fullTxt = this.toRotate[i];
+
+      if (this.isDeleting) {
+      this.txt = fullTxt.substring(0, this.txt.length - 1);
+      } else {
+      this.txt = fullTxt.substring(0, this.txt.length + 1);
+      }
+
+      this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+      var that = this;
+      var delta = 200 - Math.random() * 100;
+
+      if (this.isDeleting) { delta /= 2; }
+
+      if (!this.isDeleting && this.txt === fullTxt) {
+      delta = this.period;
+      this.isDeleting = true;
+      } else if (this.isDeleting && this.txt === '') {
+      this.isDeleting = false;
+      this.loopNum++;
+      delta = 500;
+      }
+
+      setTimeout(function() {
+      that.tick();
+      }, delta);
+  };
+
+  window.onload = function() {
+      var elements = document.getElementsByClassName('typewrite');
+      for (var i=0; i<elements.length; i++) {
+          var toRotate = elements[i].getAttribute('data-type');
+          var period = elements[i].getAttribute('data-period');
+          if (toRotate) {
+            new TxtType(elements[i], JSON.parse(toRotate), period);
+          }
+      }
+      // INJECT CSS
+      var css = document.createElement("style");
+      css.type = "text/css";
+      css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+      document.body.appendChild(css);
+  };
+</script>

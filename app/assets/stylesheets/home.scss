@@ -12,6 +12,10 @@
     font-weight: normal;
     font-style: normal;
 }
+@font-face { font-family: 'OTEnjoystoriesBA';
+             src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/OTEnjoystoriesBA.woff') format('woff');
+             font-weight: normal;
+             font-style: normal; }
 
 
 .home{
@@ -162,8 +166,8 @@
     letter-spacing: .15em; /* Adjust as needed */
     animation:
       blink-caret .5s step-end infinite;
+    }
   }
-}
 
   &-title {
     margin: auto;
@@ -177,18 +181,43 @@
       margin: 5rem 5rem;
   }
 }
-#fragment2
-{
-  margin-top:-20px;
+
+.firstpage {
+  color: #ffc107;
+  font-family: 'OTEnjoystoriesBA';
+  font-size: 60px;
+  text-align: center;
+}
+.sixth {
+  font-family: 'OTEnjoystoriesBA';
+  font-size: 90px;
+  color: #ff5216;
+}
+.students {
+
 }
 #fragment1
 {
   width: 25em;
 		    white-space:nowrap;
 		    overflow:hidden;
-		    -webkit-animation: frag1type 20s steps(50, end) 0s infinite;
+		    -webkit-animation: frag1type 10s steps(50, end) 0s infinite;
 		    animation: frag1type 20s steps(50, end) 0s infinite;
+        font-family: 'OTEnjoystoriesBA';
+        color: white;
+        font-size: 70px;
+        margin-left: 23rem;
 }
+
+#fragment2
+{
+  margin-top:-20px;
+  font-family: 'OTEnjoystoriesBA';
+  color: white;
+  font-size: 70px;
+}
+
+
 @keyframes frag1type{
 
 		    from { width: 0;}
@@ -209,7 +238,7 @@
 			width: 25em;
 		    white-space:nowrap;
 		    overflow:hidden;
-		    -webkit-animation: frag2type 20s steps(50, end) 10s infinite;
+		    -webkit-animation: frag2type 10s steps(50, end) 10s infinite;
 
 		    animation: frag2type 20s steps(50, end) 10s infinite;
 }
@@ -226,23 +255,25 @@
 		    37%{width:25em;opacity:1; }
 		    49%{width:0;opacity:1; }
 		    100%{width:0;opacity:1; }
-		}
-
-
+}
 #typewriter{
           color: white;
           font-size: 2em;
           margin: 0;
-          font-family:'Gochi Hand', cursive;
+          font-family: 'OTEnjoystoriesBA';
 
           &:after{
               content: "|";
               animation: blink 500ms linear infinite alternate;
           }
 }
+.typewrite {
+  color: white;
+  font-family: 'OTEnjoystoriesBA';
+}
 
 #profile {
-    background-color: #f7f7f7;
+    background-color: #ffc10714;
     width: 100%;
     height: 50%;
     margin: 0 auto;
