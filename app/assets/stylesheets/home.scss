@@ -1,6 +1,7 @@
 // Place all the styles related to the Home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import 'mixin.scss';
 
 @font-face {
   font-family: "Adamas-Regular";
@@ -19,6 +20,24 @@
 
 
 .home{
+  &-image{
+    width: 30rem;
+    @include desktop{
+      width: 100%;
+    }
+  }
+  &-image2{
+    width: 30rem;
+    @include desktop{
+      width: 100%;
+    }
+  }
+  &-mobile{
+    padding: .0rem;
+    @include desktop{
+      padding: 1.5rem;
+    }
+  }
   &-container{
     margin-top: 5rem;
   }
@@ -26,23 +45,33 @@
       border-color: black;
   }
   &-work{
-    margin-top: 10rem;
+    margin-top: 20rem;
+    @include desktop{
+      margin-top: 40rem;
+    }
   }
 
-  @media (min-width: 576px) {
+  @include desktop {
     &-work{
       margin-top: 30rem;
     }
   }
   &-logo {
     display: flex;
-    height:100vh;
+    height:70vh;
     min-height:400px;
     /* linear-gradient(방향, 시작점, 끝점)*/
     background-image: url(image_path('lionbg_22.jpg'));
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+    @include desktop{
+      height:100vh;
+    }
+  }
+  &-type{
+    font-size: .5rem;
+    text-align: center;
   }
   &-typestyle {
     width: 1000px;
@@ -86,7 +115,10 @@
     &-body {
         -ms-flex: 1 1 auto;
         flex: 1 1 auto;
-        padding: 0rem!important;
+        padding: 0rem;
+        @include desktop{
+        padding: 1.5rem;
+        }
         @extend .overlay;
     }
     &-img-top {
@@ -185,13 +217,19 @@
 .firstpage {
   color: #ffc107;
   font-family: 'OTEnjoystoriesBA';
-  font-size: 70px;
+  font-size: 30px;
   text-align: center;
+    @include desktop {
+        font-size: 70px;
+    }
 }
 .sixth {
   font-family: 'OTEnjoystoriesBA';
-  font-size: 100px;
+  font-size: 70px;
   color: #ff5216;
+  @include desktop {
+    font-size: 100px;
+  }
 }
 .students {
 
@@ -270,6 +308,7 @@
 .typewrite {
   color: white;
   font-family: 'OTEnjoystoriesBA';
+  font-size: 1rem;
 }
 
 #profile {

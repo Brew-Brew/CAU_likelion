@@ -15,8 +15,8 @@
         <h4 class="firstpage">
           멋쟁이 사자처럼 <span class="sixth">6기 합격</span> 을 축하합니다!!
         </h4>
-        <h4 style="text-align: center; ">
-            <a style="font-weight: lighter; color: white; font-size: 60px;"class="typewrite" data-period="2000" data-type='[ "재건", "명승", "유림", "혜린(김)", "혜린(남)", "승완", "시현", "종혁", "민승"
+        <h4 class="home-type">
+            <a style="font-family: 'OTEnjoystoriesBA';font-weight: lighter; color: white; font-size: 60px;"class="typewrite" data-period="2000" data-type='[ "재건", "명승", "유림", "혜린(김)", "혜린(남)", "승완", "시현", "종혁", "민승"
             , "수진", "상무", "희성", "동규", "재준", "호설", "현희", "호영", "민정"]'>
               <span class="wrap"></span>
             </a>
@@ -37,8 +37,8 @@
             <h2 class="about-category" style="font-family: 'OTEnjoystoriesBA'; font-size: 70px; text-align: center; color: #00327c; font-weight: bold;">What We Do</h2>
             <hr>
             <div class="card-body text-center">
-              <%= image_tag "Change" %>
-              <%= image_tag "changeworld" %>
+              <%= image_tag "Change",:class =>"home-image" %>
+              <%= image_tag "changeworld",:class =>"home-image2" %>
             </div>
 
             <!-- <h2 class="about-title py-5">CHANGE THE WORLD WITH CODING!</h2> -->
@@ -49,7 +49,7 @@
 
             <div class="col-md-4">
               <div class="card my-4" >
-                <div class="card-body member-card text-center">
+                <div class="card-body member-card text-center home-mobile">
                   <div class="card-body">
                     <h4 class="card-title">스터디</h4>
                     <p class="card-text">코딩이 처음이셔도 상관없습니다. <br />같이 배우면서 함께 성장해 나가봅시다!!!!</p>
@@ -60,10 +60,10 @@
 
             <div class="col-md-4">
               <div class="card my-4" >
-                <div class="card-body member-card text-center">
+                <div class="card-body member-card text-center home-mobile">
                   <div class="card-body">
-                    <h4 class="card-title">CAU해커톤</h4>
-                    <p class="card-text">[기획 + 개발 + 런칭]을 하루만에..! <br />열심히 쌓은 실력을 해커톤에 쏟아봅시다.</p>
+                    <h4 class="card-title">해커톤</h4>
+                    <p class="card-text">[기획+개발+런칭]을 하루만에..! <br />열심히 쌓은 실력을 해커톤에 쏟아봅시다.</p>
                   </div>
                 </div>
               </div>
@@ -71,7 +71,7 @@
 
             <div class="col-md-4">
               <div class="card my-4" >
-                <div class="card-body member-card text-center">
+                <div class="card-body member-card text-center home-mobile">
                   <div class="card-body">
                     <h4 class="card-title">네트워킹</h4>
                     <p class="card-text">학교 내 사람들 뿐만 아니라 연합세미나를 진행하며 학교간 교류도 활발히 진행합니다.</p>
@@ -163,102 +163,103 @@
                             </div>
                         </div>
                     </section>
+                    <section id="managers">
+                       <div class="container text-center py-5">
+                          <h2 style="font-family: 'OTEnjoystoriesBA'; font-size: 70px; text-align: center; color: #00327c;">CAU-LION MANAGERS</h2>
+                          <hr>
+                            <br>
+                            <div class="card-group">
+                              <div class="card text-center">
+                                  <%= image_tag "mkicon.jpg", :class =>"card-img-top"  %>
+                                  <div class="card-body">
+                                    <h5 class="card-title">강민경</h5>
+                                    <p class="card-text"><small class="text-muted">응용통계학과</small></p>
+                                    <div class="overlay text-center">다비치가 부릅니다.<br />8282</div>
+                                  </div>
+                              </div>
+                              <div class="card text-center">
+                              <%= image_tag "hkicon.jpg", :class =>"card-img-top"  %>
+                                <div class="card-body">
+                                  <h5 class="card-title">류효광</h5>
+                                  <p class="card-text"><small class="text-muted">전자전기공학과</small></p>
+                                  <div class="overlay text-center">결혼 조하.</div>
+                                </div>
+                              </div>
+                              <div class="card text-center">
+                                <%= image_tag "jwicon.jpg", :class =>"card-img-top"  %>
+                                <div class="card-body">
+                                  <h5 class="card-title">송정우</h5>
+                                  <p class="card-text"><small class="text-muted">컴퓨터공학과</small></p>
+                                  <div class="overlay text-center">중 앙기모띠</div>
+                                </div>
+                              </div>
+                              <div class="card text-center">
+                                <%= image_tag "jsicon.jpg", :class =>"card-img-top"  %>
+                                <div class="card-body">
+                                  <h5 class="card-title">심지선</h5>
+                                  <p class="card-text"><small class="text-muted">경영학과</small></p>
+                                  <div class="overlay text-center">이 편지는 19세기 영국에서부터 시작되어...</div>
+                                </div>
+                              </div>
+                              <div class="card text-center">
+                              <%= image_tag "skicon.jpg", :class =>"card-img-top"  %>
+                                <div class="card-body">
+                                  <h5 class="card-title center">이승규</h5>
+                                  <p class="card-text"><small class="text-muted">컴퓨터공학과</small></p>
+                                  <div class="overlay text-center">
+                                    <p>이시대 최고의 위트가이<br />???</p></div>
+                                </div>
+                              </div>
+                              <div class="card text-center">
+                                <%= image_tag "dwicon.jpg", :class =>"card-img-top"  %>
+                                <div class="card-body">
+                                  <h5 class="card-title center">홍동우</h5>
+                                  <p class="card-text"><small class="text-muted">전자전기공학과</small></p>
+                                  <div class="overlay text-center">아영아 <br />난 너밖에 없다.</div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <section id="aboutlikelion" class="d-flex align-items-center" style="background-color: #FFFF;">
+                            <div class="container py-5">
+                              <h1 class="text-center about-heading" style="color: #A2B9DB; font-family: 'OTEnjoystoriesBA';">Who's NEXT?</h1>
+                              <br>
+
+                          	</div>
+                          </section>
+
+
+                          <section id="contact" style="background-color: #FFFF;">
+                          	<div class="container">
+                          		<h2 style="font-family: 'OTEnjoystoriesBA'; font-size: 70px; text-align: center; color: #00327c;">Contacts</h2>
+                          		<hr>
+                          		<div class="row my-5">
+                          			<div class="col-md-6">
+                                  <button type="button" class="btn btn-outline-primary btn-lg btn-block py-4 my-2">
+                                    <a href="https://www.facebook.com/LikelionCAU/" class="btn-font-size">
+
+                                    멋쟁이사자처럼 at 중앙대학교
+
+                                    </a>
+                                  </button>
+                          			</div>
+                          			<div class="col-md-6">
+                                  <button type="button" class="btn btn-outline-warning btn-lg btn-block py-4 my-2">
+                                    <a href="https://likelion.net/" class="btn-font-size" style="color: #ffc107">
+                                      멋쟁이사자처럼 공식홈페이지
+                                    </a>
+                                  </button>
+                          			</div>
+                          		</div>
+                          	</div>
+
+                          </section>
+                    </section>
       </section>
 
-<section id="managers">
-   <div class="container text-center py-5">
-      <h2 style="font-family: 'OTEnjoystoriesBA'; font-size: 70px; text-align: center; color: #00327c;">CAU-LION MANAGERS</h2>
-      <hr>
-        <br>
-        <div class="card-group">
-          <div class="card text-center">
-              <%= image_tag "mkicon.jpg", :class =>"card-img-top"  %>
-              <div class="card-body">
-                <h5 class="card-title">강민경</h5>
-                <p class="card-text"><small class="text-muted">응용통계학과</small></p>
-                <div class="overlay text-center">다비치가 부릅니다.<br />8282</div>
-              </div>
-          </div>
-          <div class="card text-center">
-          <%= image_tag "hkicon.jpg", :class =>"card-img-top"  %>
-            <div class="card-body">
-              <h5 class="card-title">류효광</h5>
-              <p class="card-text"><small class="text-muted">전자전기공학과</small></p>
-              <div class="overlay text-center">결혼 조하.</div>
-            </div>
-          </div>
-          <div class="card text-center">
-            <%= image_tag "jwicon.jpg", :class =>"card-img-top"  %>
-            <div class="card-body">
-              <h5 class="card-title">송정우</h5>
-              <p class="card-text"><small class="text-muted">컴퓨터공학과</small></p>
-              <div class="overlay text-center">중 앙기모띠</div>
-            </div>
-          </div>
-          <div class="card text-center">
-            <%= image_tag "jsicon.jpg", :class =>"card-img-top"  %>
-            <div class="card-body">
-              <h5 class="card-title">심지선</h5>
-              <p class="card-text"><small class="text-muted">경영학과</small></p>
-              <div class="overlay text-center">이 편지는 19세기 영국에서부터 시작되어...</div>
-            </div>
-          </div>
-          <div class="card text-center">
-          <%= image_tag "skicon.jpg", :class =>"card-img-top"  %>
-            <div class="card-body">
-              <h5 class="card-title center">이승규</h5>
-              <p class="card-text"><small class="text-muted">컴퓨터공학과</small></p>
-              <div class="overlay text-center">
-                <p>이시대 최고의 위트가이<br />???</p></div>
-            </div>
-          </div>
-          <div class="card text-center">
-            <%= image_tag "dwicon.jpg", :class =>"card-img-top"  %>
-            <div class="card-body">
-              <h5 class="card-title center">홍동우</h5>
-              <p class="card-text"><small class="text-muted">전자전기공학과</small></p>
-              <div class="overlay text-center">아영아 <br />난 너밖에 없다.</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-</section>
-
-<section id="aboutlikelion" class="d-flex align-items-center" style="background-color: #FFFF;">
-  <div class="container py-5">
-    <h1 class="text-center about-heading" style="color: #A2B9DB; font-family: 'OTEnjoystoriesBA';">Who's NEXT?</h1>
-    <br>
-
-	</div>
-</section>
 
 
-<section id="contact" style="background-color: #FFFF;">
-	<div class="container">
-		<h2 style="font-family: 'OTEnjoystoriesBA'; font-size: 70px; text-align: center; color: #00327c;">Contacts</h2>
-		<hr>
-		<div class="row my-5">
-			<div class="col-md-6">
-        <button type="button" class="btn btn-outline-primary btn-lg btn-block py-4 my-2">
-          <a href="https://www.facebook.com/LikelionCAU/" class="btn-font-size">
 
-          멋쟁이사자처럼 at 중앙대학교
-
-          </a>
-        </button>
-			</div>
-			<div class="col-md-6">
-        <button type="button" class="btn btn-outline-warning btn-lg btn-block py-4 my-2">
-          <a href="https://likelion.net/" class="btn-font-size" style="color: #ffc107">
-            멋쟁이사자처럼 공식홈페이지
-          </a>
-        </button>
-			</div>
-		</div>
-	</div>
-
-</section>
 
 <script>
 var TxtType = function(el, toRotate, period) {
