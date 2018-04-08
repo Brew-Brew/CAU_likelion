@@ -24,7 +24,7 @@ user=[
 ["심지선",2,"경영학과","si4420@likelion.org","testtest","testtest"],
 ["홍동우",2,"전자전기공학과","sapot1998@gmail.com","testtest","testtest"],
 ["송정우",3,"소프트웨어학과","song@liklion.org","testtest","testtest"],
-["류효광",3,"전자전기공학과","ryu@likelion.org","testtest","testtest"],
+["류효광",3,"전자전기공학과","hkryu0719@likelion.org","testtest","testtest"],
 ]
 user.each do |name,team_id,major,email,password,password_confirmation|
   User.create!(name: name,team_id: team_id, major: major, email: email,password: password,password_confirmation: password_confirmation).add_role(:admin)
